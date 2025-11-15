@@ -1,0 +1,31 @@
+{
+  "name": "shinobi-no-sho",
+  "version": "1.13.3",
+  "description": "Este é um sistema de Naruto \"Shinobi no Sho\", um sistema e livro de regras com autoria de Diego \"Fesant\" Silva, para a plataforma de RPG de Mesa conhecida como FoundryVTT.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss/shinobiNoSho.scss css/shinobiNoSho.css",
+    "packs": "node utils/packs.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SouOWendel/shinobi-no-sho.git"
+  },
+  "keywords": [
+    "rpg",
+    "shinobi",
+    "no",
+    "sho",
+    "foundryvtt",
+    "system"
+  ],
+  "author": "Wendel Henrique (SouOWendel)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SouOWendel/shinobi-no-sho/issues"
+  },
+  "homepage": "https://github.com/SouOWendel/shinobi-no-sho#readme",
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^1.0.3"
+  }
+}

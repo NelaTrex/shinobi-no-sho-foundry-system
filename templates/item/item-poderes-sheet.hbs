@@ -1,0 +1,97 @@
+<form id="poderes" class="{{cssClass}} flexcol" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" 
+			value="{{item.name}}" placeholder="Nome"/></h1>
+			<div class="flex flex-group-center">
+				<label for="system.nivelPoder" class="resource-label p-r-10 item-small">Nível de Poder</label>
+				<div class="resource item-small">
+						<div class="resource-content">
+							<input type="text" name="system.nivelPoder" style="text-align: center;"
+							value="{{system.nivelPoder}}" data-dtype="String"/>
+						</div>
+				</div>
+			</div>
+		</div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="detalhes">Detalhes Gerais</a>
+		<a class="item" data-tab="caracteristicas">Características</a>
+		<a class="item" data-tab="efeitosAdquiridos">Efeitos Adquiridos</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+		<div class="tab efeitosAdquiridos" data-group="primary" data-tab="efeitosAdquiridos">
+			<div class="content">
+				<div class="flex-group-center" style="padding: 0 50px;">
+					<div class="item flexrow flex-group-center">
+						<div class='flex-2 item-prop bold'>Nome do Efeito Adquirido</div>
+						<div class='flex-2 item-prop bold'>Nível</div>
+					</div>
+					{{#each system.efeitosAdquiridos as |effects i|}}
+					<div class="flex flex-group-center effectsPower-part" style="padding-top: 2px;" data-effects-part="{{i}}">
+						<div class="resource flex flex-2">
+							<div class="resource-content">
+								<input type="text" name="system.efeitosAdquiridos.{{i}}.0" 
+								value="{{lookup this "0"}}" data-dtype="String"/>
+							</div>
+						</div>
+						<div class="resource flex flex-2">
+							<i class="fas fa-plus"></i>
+							<div class="resource-content">
+								<input type="text" name="system.efeitosAdquiridos.{{i}}.1" 
+								value="{{lookup this "1"}}" data-dtype="String" style="text-align:center;"/>
+							</div>
+							<a class="effectsPower-control delete-effectsPower"><i class="fas fa-trash"></i></a>
+						</div>
+					</div>
+					{{/each}}
+					<div class="flex flex-group-center" style="margin-top: 6px;">
+						<div class="resource flex flex-3" style="justify-content: center; border: 1px dashed #BEBEBE">
+							<div class="flex flex-group-center" style="padding: 5px 0; opacity: 0.6;">
+								<a class="effectsPower-control add-effectsPower align-center"><i class="fas fa-plus"></i> Adicionar efeito adquirido</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{{!-- Characteristics Tab --}}
+    <div class="tab caracteristicas" data-group="primary" data-tab="caracteristicas">
+			<div class="content">
+				<div style="margin-top: 10px;">
+					<h3 class="section-title">Características</h3>
+					{{editor system.caracteristicas target="system.caracteristicas" 
+				rollData=rollData button=true owner=owner editable=editable}}
+				</div>
+			</div>
+    </div>
+
+    {{!-- Details Tab --}}
+    <div class="tab" data-group="primary" data-tab="detalhes">
+			<div class="content">
+				<div class="flex flex-group-center">
+					<div class="resource flex flex-3">
+						<label for="system.preRequisito" class="resource-label p-r-10">Pré-requisito</label>
+						<div class="resource-content">
+							<input type="text" name="system.preRequisito" 
+							value="{{system.preRequisito}}" data-dtype="String"/>
+						</div>
+					</div>
+				</div>
+				<div class="" style="margin-top: 10px;">
+					<h3 class="section-title">Descrição</h3>
+					{{editor system.descricao target="system.descricao" 
+					rollData=rollData button=true owner=owner editable=editable}}
+				</div>
+			</div>
+    </div>
+
+  </section>
+</form>

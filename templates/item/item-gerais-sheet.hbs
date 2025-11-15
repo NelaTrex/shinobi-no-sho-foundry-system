@@ -1,0 +1,134 @@
+<form id="gerais" class="{{cssClass}} flexcol" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Nome" /></h1>
+      <div class="flex header-fields-2">
+        <div class="resource flex-1" style="text-align: center !important;">
+          <label class="resource-label">Qtd</label>
+          <input type="text" name="system.quantidade" value="{{system.quantidade}}" data-dtype="Number" class="inputCenter"/>
+        </div>
+        <div class="resource flex-1">
+          <label class="resource-label">Preço</label>
+          <input type="text" name="system.preco" value="{{system.preco}}" data-dtype="Number" class="inputCenter"/>
+        </div>
+				<div class="resource flex-2">
+          <label class="resource-label">Raridade</label>
+          <select name="system.rarity">
+						{{selectOptions itemsDropdown.generico.rarity 
+						selected=system.rarity 
+						localize=true blank="—"}}
+					</select>
+        </div>
+				<div class="resource flex-3">
+          <label for="system.tipo" class="resource-label">
+							{{localize "shinobiNoSho.Item.itensGerais.tipoItemGeral"}}
+						</label>
+						<div class="resource-content">
+							<select name="system.tipo">
+								{{selectOptions itemsDropdown.geral.tipo 
+								selected=system.tipo 
+								localize=true blank="—"}}
+							</select>
+						</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="detalhes">Detalhes Gerais</a>
+		<a class="item" data-tab="tabArea">Predefinições de Área</a>
+		<a class="item" data-tab="efeitos">Efeitos</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+		<div class="tab" data-group="primary" data-tab="detalhes">
+			<div class="content">
+				<div class="flex flex-group-center">
+					<div class="resource flex flex-2">
+							<label for="system.compartimentos.qtdItem" class="resource-label p-r-10">Compart.</label>
+							<div class="resource-content">
+								<input type="text" name="system.compartimentos.qtdItem" 
+								value="{{system.compartimentos.qtdItem}}" data-dtype="Number" class="inputCenter"/>
+							</div>
+							<i> / </i>
+							<div class="resource-content">
+								<input type="text" name="system.compartimentos.compartOcupa" 
+								value="{{system.compartimentos.compartOcupa}}" data-dtype="Number" class="inputCenter"/>
+							</div>
+					</div>
+					<div class="resource flex flex-2">
+							<label for="system.compartimentos.qtdItem" class="resource-label p-r-10">Usos</label>
+							<div class="resource-content">
+								<input type="text" name="system.usos.value" 
+								value="{{system.usos.value}}" data-dtype="Number" class="inputCenter"/>
+							</div>
+							<i> / </i>
+							<div class="resource-content">
+								<input type="text" name="system.usos.max" 
+								value="{{system.usos.max}}" data-dtype="Number" class="inputCenter"/>
+							</div>
+					</div>
+				</div>
+				<div class="" style="margin-top: 10px;">
+					<h3 class="section-title">Descrição</h3>
+					{{editor system.descricao target="system.descricao" rollData=rollData
+					button=true owner=owner editable=editable}}
+				</div>
+			</div>
+		</div>
+
+		<div class="tab tabArea" data-group="primary" data-tab="tabArea">
+			<div class="content">
+				<div class="itemAreaTemplate">
+					<h3 class="section-title">Predefinições de Área</h3>
+					<div id="areaTemplate">
+						{{#each system.areaTemplate as |areas i|}}
+						<div class="predefinedAreas areaTemplate-part" data-area-part="{{i}}">
+							<div class="area flex-group-center">
+								<i class="fa-solid fa-shapes"></i>
+								<select name="system.areaTemplate.{{i}}.0">
+									{{selectOptions ../areas selected=(lookup this "0") localize=true}}
+								</select>
+								de
+								<input type="text" name="system.areaTemplate.{{i}}.1" value="{{lookup this "1"}}" data-dtype="Number"/>
+								<i class="fa-solid fa-plus"></i>
+								<input type="text" name="system.areaTemplate.{{i}}.2" value="{{lookup this "2"}}" data-dtype="Number"/>
+								<select name="system.areaTemplate.{{i}}.3">
+									{{selectOptions ../regraArea selected=(lookup this "3") localize=true}}
+								</select>
+								{{#ifEquals (lookup this "3") "custom"}}
+									<input type="text" name="system.areaTemplate.{{i}}.5" value="{{lookup this "5"}}" data-dtype="Number"/>
+								{{/ifEquals}}
+								<i class="fa-solid fa-equals"></i>
+								<input type="text" name="system.areaTemplate.{{i}}.4" value="{{lookup this "4"}}" data-dtype="Number" disabled/>
+								<a class="areaTemplate-control delete-areaTemplate"><i class="fa-solid fa-trash"></i></a>
+							</div>
+						</div>
+						{{/each}}
+					</div>
+					<div class="flex flex-group-center" style="margin-top: 6px;">
+						<div class="resource" style="justify-content: center; border: 1px dashed #BEBEBE">
+							<div class="flex flex-group-center" style="padding: 5px 0; opacity: 0.6;">
+								<a class="areaTemplate-control add-areaTemplate align-center">
+									<i class="fas fa-plus"></i> Adicionar nova área
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+    {{!-- Effects Tab --}}
+    <div class="tab efeitos" data-group="primary" data-tab="efeitos">
+			<div class="content">
+      	{{> "systems/shinobinosho/templates/item/parts/item-efeitos.hbs"}}
+			</div>
+    </div>
+  </section>
+</form>

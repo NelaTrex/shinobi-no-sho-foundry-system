@@ -1,0 +1,115 @@
+<form id="armaduras" class="{{cssClass}} flexcol" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Nome" /></h1>
+      <div class="grid grid-3col">
+        <div class="resource">
+          <label class="resource-label">Quantidade</label>
+          <input type="text" name="system.quantidade" value="{{system.quantidade}}" data-dtype="Number" />
+        </div>
+        <div class="resource">
+          <label class="resource-label">Preço</label>
+          <input type="text" name="system.preco" value="{{system.preco}}" data-dtype="Number" />
+        </div>
+				<div class="resource">
+          <label class="resource-label">Raridade</label>
+          <select name="system.rarity">
+						{{selectOptions itemsDropdown.generico.rarity 
+						selected=system.rarity 
+						localize=true blank="—"}}
+					</select>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="descricao">Descrição</a>
+    <a class="item" data-tab="detalhes">Detalhes</a>
+		<a class="item" data-tab="efeitos">Efeitos</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Description Tab --}}
+    <div class="tab" data-group="primary" data-tab="descricao">
+			<div class="content">
+				<div class="" style="margin-top: 10px;">
+					<h3 class="section-title">Descrição</h3>
+					{{editor system.descricao target="system.descricao" 
+				rollData=rollData button=true owner=owner editable=editable}}
+				</div>
+			</div>
+    </div>
+
+    {{!-- Details Tab --}}
+    <div class="tab detalhes" data-group="primary" data-tab="detalhes">
+			<div class="content">
+				<div class="flex flex-group-center">
+					<div class="resource flex flex-2">
+						<label for="system.tipo" class="resource-label p-r-10">Tipo de Armadura</label>
+						<div class="resource-content">
+							<select name="system.tipo" class="item-medium">
+								{{selectOptions itemsDropdown.armaduras.tipo 
+								selected=system.tipo 
+								localize=true blank="—"}}
+							</select>
+						</div>
+					</div>
+					<div class="resource flex flex-2">
+						<label for="system.bonusAbsorcao" class="resource-label p-r-10">Bônus de Absorção</label>
+						<div class="resource-content">
+							<input type="text" name="system.bonusAbsorcao" 
+							value="{{system.bonusAbsorcao}}" data-dtype="Number"/>
+						</div>
+					</div>
+				</div>
+
+				<div class="flex flex-group-center">
+					<div class="resource flex flex-2">
+						<label for="system.penalidade" class="resource-label p-r-10">Penalidade de Armadura</label>
+						<div class="resource-content">
+							<input type="text" name="system.penalidade" 
+							value="{{system.penalidade}}" data-dtype="String"/>
+						</div>
+					</div>
+					<div class="resource flex flex-2">
+						<label for="system.dureza" class="resource-label p-r-10">Dureza</label>
+						<div class="resource-content">
+							<input type="text" name="system.dureza" 
+							value="{{system.dureza}}" data-dtype="Number"/>
+						</div>
+					</div>
+				</div>
+
+				<div class="flex flex-group-center">
+					<div class="resource flex flex-2">
+						<label class="resource-label p-r-10">Compart.</label>
+						<div class="resource-content">
+							<input type="text" name="system.compartimentos.qtdItem" 
+							value="{{system.compartimentos.qtdItem}}" data-dtype="String"/>
+						</div>
+					</div>
+					<div class="resource flex flex-1">
+						<i class="">/</i>
+						<div class="resource-content">
+							<input type="text" name="system.compartimentos.compartOcupa" 
+							value="{{system.compartimentos.compartOcupa}}" data-dtype="String"/>
+						</div>
+					</div>
+					<div class="resource flex flex-3"></div>
+				</div>
+			</div>
+    </div>
+
+		{{!-- Effects Tab --}}
+    <div class="tab efeitos" data-group="primary" data-tab="efeitos">
+			<div class="content">
+      	{{> "systems/shinobinosho/templates/item/parts/item-efeitos.hbs"}}
+			</div>
+    </div>
+  </section>
+</form>

@@ -1,0 +1,499 @@
+.actor {
+	min-width: 600px !important;
+	min-height: 820px !important;
+}
+
+.item-form {
+  font-family: $font-primary;
+}
+
+.window-content {
+	overflow: hidden;
+}
+
+.sheet-header, .atributos,
+.acessoRapido {
+	border: 1px solid #949494;
+	border-radius: 4px;
+	padding: 6px;
+	select { width: 100%; }
+}
+
+.sheet-header {
+  flex: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 6px;
+
+  .profile-img {
+    flex: 0 0 100px;
+    height: 125px;
+    margin-right: 10px;
+  }
+
+  .header-fields {
+    flex: 2;
+
+		input, select {
+			height: 27px;
+			margin-bottom: 2px;
+		}
+
+		.resources {
+			grid-row-gap: 80px;
+		}
+  }
+
+	.profile {
+		flex: 1;
+		padding-right: 10px;
+	}
+
+  h1.charname {
+    height: 50px;
+    padding: 0px;
+    margin: 5px 0;
+    border-bottom: 0;
+    input {
+      min-width: 235px;
+			width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+  }
+}
+
+.pericias-sheet-tabs {
+	margin-top: 0px !important;
+}
+
+.sheet-tabs, .pericias-sheet-tabs {
+  flex: 0;
+	font-size: small;
+
+	.item {
+		padding: 8px !important;
+	}
+}
+
+.sheet-body,
+.sheet-body .tab,
+.sheet-body .tab .editor {
+  height: 100%;
+}
+
+.tab {
+	overflow-y: hidden;
+	height: 100%;
+	align-content: flex-start;
+	padding-right: 2px;
+}
+
+.sheet-body {
+	overflow: hidden;
+}
+
+.window-content {
+	overflow-y: hidden;
+}
+
+form {
+	height: 100%;
+	overflow: hidden;
+}
+
+.content {
+	height: 100%;
+	overflow-y: auto;
+}
+
+.tox {
+  .tox-editor-container {
+    background: $c-white;
+  }
+
+  .tox-edit-area {
+    padding: 0 8px;
+  }
+}
+
+#middle-content {
+  flex: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+	height: 80px;
+	gap: 6px;
+
+	.atributos {
+		flex: 0;
+		display: flex;
+  	flex-direction: row;
+  	flex-wrap: nowrap;
+  	justify-content: space-around;
+		align-items: center;
+		text-align: center;
+
+		input {
+			font-size: large;
+		}
+
+		.resource {
+			width: 40px;
+		}
+	}
+
+	.acessoRapido {
+		flex: 1;
+		display: flex;
+  	flex-direction: row;
+  	flex-wrap: nowrap;
+  	justify-content: space-around;
+		align-items: center;
+		text-align: center;
+
+		.resource-content {
+			justify-content: center;
+			gap: 2px;
+			input {
+				width: 35px;
+				height: 30px;
+			}
+		}
+	}
+
+	.resource input {
+		width: 35px;
+		height: 35px;
+	}
+
+	.resource label {
+		font-size: 11px;
+		font-weight: 400;
+	}
+}
+
+.section-title {
+		border: none;
+		text-align: center;
+		background-color: #BEBEBE;
+}
+
+.sub-body {
+	.tab {
+		gap: 5px;
+
+		.row {
+			display: flex;
+			flex-direction: row;
+			gap: 5px;
+			margin-bottom: 5px;
+		}
+		
+		.descricao .editor,
+		.manias .editor,
+		.filosofia .editor {
+			min-height: 170px !important;
+		}
+
+		.historia .editor,
+		.relacoes .editor {
+			height: 300px !important;
+		}
+	}
+
+	.relacoes {
+		.item {
+			display: flex;
+		}
+
+		.resource-content {
+			gap: 4px;
+			margin-bottom: 4px;
+		}
+	}
+}
+
+.container {
+	border: 1px solid #949494;
+	border-radius: 4px;
+	padding: 5px;
+}
+
+.anotacoes .editor {
+	min-height: 380px;
+}
+
+#habilidadesCombate, #estatisticasCombate {
+	margin-top: 6px;
+	.resource-content i {
+		padding: 0 5px;
+	}
+
+	& > div { margin-bottom: 10px; }
+	& > div:last-of-type { margin-bottom: 5px; }
+
+	div .item-prop {
+		padding-left: 20px;
+	}
+
+}
+
+#estatisticasCombate {
+	margin-top: 10px;
+	input, select { max-width: 100px;}
+}
+
+#periciasGerais {
+	position: relative;
+	margin-bottom: 6px;
+
+	.periciaLivre {
+		padding-right: 0;
+	}
+
+	.resource-content i {
+		padding: 0 5px;
+	}
+
+	.resource-label {
+		font-size: 12px;
+	}
+
+	input[type=text] {
+		width: 30px !important;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(10, 1fr);
+		grid-column-gap: 6px;
+		grid-row-gap: 3px;
+		grid-auto-flow: column;
+	}
+}
+
+.rollPericiaLivre {
+	position: absolute;
+	left: 63%;
+	right: 0px;
+	width: 24px;
+}
+
+#periciasSociais {
+	.resource-content {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-column-gap: 6px;
+		grid-row-gap: 6px;
+		grid-auto-flow: column;
+		padding: 0 8px;
+	}
+
+	.resource-label {
+		font-size: 12px;
+	}
+
+	input[type=text] {
+		width: 30px !important;
+	}
+}
+
+
+
+#atributosSociais {
+	flex: 0.8;
+	margin-bottom: 6px;
+
+	.resource input {
+		width: 40px;
+		height: 40px;
+		margin-bottom: 5px;
+	}
+
+	.resource-label {
+		font-size: 12px;
+	}
+	
+	.main-content {
+		height: 70%;
+		justify-content: space-around;
+		align-items: center;
+	}
+}
+
+.skill-label {
+	text-align: left;
+	padding-left: 5px;
+}
+
+.prestidigitacao {
+	font-size: 12.5px;
+}
+
+.item-quantity, .item-uses {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	i { padding: 0 6px; }
+
+	input { 
+		background: none;
+		border: none;
+		text-align: center;
+		width: 30px !important;
+	}
+}
+
+// NPC
+.NPC {
+	header {
+		margin: 0;
+	}
+
+	.profile {
+		flex: none;
+		padding: 0;
+		img { border-radius: 4px; }
+	}
+	.atributos-npc {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		.charname {
+			margin: 0;
+			input {
+				height: 52px;
+				border-radius: 4px;
+			}
+		}
+		.atributos-area {
+			display: flex;
+			justify-content: space-between;
+			.resource {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.resource input {
+				width: 34px;
+				height: 34px;
+				text-align: center;
+			}
+		}
+	}
+
+	.info-area {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+		grid-column-gap: 12px;
+		grid-row-gap: 10px;
+		grid-auto-flow: column;
+		margin-top: 6px;
+	}
+
+	.resource-npc {
+		display: flex;
+		background: rgba(0, 0 ,0 , 0.05);
+		border: 1px solid #7a797150;
+		height: 23px;
+		justify-content: space-between;
+		align-items: center;
+		font-weight: bold;
+		padding: 2px 6px;
+		border-radius: 4px;
+		label { 
+			text-transform: uppercase;
+			font-size: 12px;
+		}
+		input {
+			border: 0;
+			background: none;
+			width: 30px;
+			height: 24px;
+			text-align: end;
+		}
+	}
+
+	#pericias {
+		display: flex;
+		.section-title {
+			font-size: 14px;
+			font-weight: bold;
+		}
+		.gerais .grid {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(10, 1fr);
+			grid-column-gap: 12px;
+			grid-row-gap: 6px;
+			grid-auto-flow: column;
+			margin-top: 6px;	
+		}
+	
+		.sociais {
+			margin-left: 12px;
+			.resource-content {
+				display: flex;
+				flex-direction: column;
+			}
+			.resource-npc {
+				margin-bottom: 6px;
+			}
+		}
+
+		label { 
+			text-transform: capitalize;
+		}
+
+		.rollPericiaLivre {
+			position: absolute;
+			left: 52.5%;
+			right: 0px;
+			width: 24px;
+		}
+
+		.periciaLivre {
+			text-align: start;
+			font-size: 12px;
+		}
+	}
+
+	.item-quantity {
+		input {
+			width: 15px !important;
+			height: 20px;
+		}
+	}
+
+	.item-small {
+		padding: 0;
+	}
+
+	.tamanho-npc {
+		background: none;
+		border: 0;
+		text-align: end;
+		padding: 0;
+		flex: 0 0 90px;
+		height: 20px;
+	}
+
+	.descricao .editor, .descricao {
+		height: 100%;
+	}
+
+	.tox-editor-container {
+		button {
+			width: 42px !important;
+		}
+	}
+}

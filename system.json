@@ -1,0 +1,80 @@
+{
+  "id": "shinobinosho",
+  "title": "Shinobi no Sho (SnS) Revamp",
+  "description": "Este é um sistema de Naruto 'Shinobi no Sho', um sistema e livro de regras com autoria de Diego 'Fesant' Silva, para a plataforma de RPG de Mesa conhecida como FoundryVTT. O desenvolvimento do sistema foi apoiado por Vallen.",
+  "authors": [
+    {
+      "name": "NelaTrex",
+      "email": "jn.nelatrex@gmail.com",
+      "discord": "nelatrex",
+      "flags": {}
+    }
+  ],
+  "url": "https://github.com/SouOWendel/shinobi-no-sho",
+  "readme": "README.md",
+  "bugs": "https://github.com/SouOWendel/shinobi-no-sho/issues",
+  "changelog": "CHANGELOG.md",
+  "version": "1.13.3",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "12"
+  },
+  "esmodules": [
+    "module/shinobiNoSho.mjs"
+  ],
+  "styles": [
+    "css/shinobiNoSho.css"
+  ],
+  "languages": [
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json",
+      "flags": {}
+    },
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    }
+  ],
+  "flags": {
+    "hotReload": {
+      "extensions": [
+        "css",
+        "html",
+        "hbs",
+        "json"
+      ],
+      "paths": [
+        "templates",
+        "css",
+        "lang"
+      ]
+    },
+    "needsMigrationVersion": "1.12.0"
+  },
+  "packs": [
+    {
+      "name": "macros",
+      "label": "Macros",
+      "system": "shinobinosho",
+      "path": "packs/macros",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    }
+  ],
+  "socket": true,
+  "manifest": "https://raw.githubusercontent.com/souowendel/shinobi-no-sho/main/system.json",
+  "download": "https://github.com/SouOWendel/shinobi-no-sho/releases/download/v1.13.3/shinobinosho-v1.13.3.zip",
+  "grid": {
+    "units": "m"
+  },
+  "primaryTokenAttribute": "attributes.vitalidade",
+  "secondaryTokenAttribute": "attributes.chakra"
+}

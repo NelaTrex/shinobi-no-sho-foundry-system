@@ -1,0 +1,38 @@
+#d8roll {
+	.dice-flavor {
+		text-align: left !important;
+		color: var(--color-text-dark-secondary);
+		line-height: 20px;
+	}
+	
+	.dice-flex {
+		width: 100%;
+	}
+
+	.grid {
+		gap: 5px;
+		margin: 0;
+	}
+
+	.itsCritical .dice-total {
+		border: #006c00 1px solid;
+		background-color: #c7d0c0;
+		color: inherit;
+	}
+
+	.itsFailure .dice-total {
+		border: #6e0000 1px solid;
+		background-color: #ffdddd;
+		color: inherit;
+	}
+
+	.degree {
+		font-size: 18px;
+		font-weight: normal;
+	}
+}
+
+.dice-total {
+	border-radius: 3px;
+	padding: .25rem;
+}

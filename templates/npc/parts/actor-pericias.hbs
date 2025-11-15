@@ -1,0 +1,36 @@
+
+	<section id="pericias" class="container">
+		<div class="gerais flex-2">
+			<h3 class="section-title">Perícias Gerais</h3>
+			<div class="grid">
+				{{#each system.skills.geral as |skill id|}}
+				<div class="resource-npc">
+					{{#if skill.caract.livre}}
+						<input type="text" name="system.skills.geral.{{id}}.nome" value="{{skill.nome}}"
+					 class="resource-label flex-1 periciaLivre" data-type="String" placeholder="Perícia Livre">
+					 <i class="fas fa-dice {{id}} rollable rollPericiaLivre" data-roll-type="skill" data-key="{{id}}"></i>
+					{{else}}
+						<label class="resource-label {{id}} rollable" data-roll-type="skill" data-key="{{id}}">{{label}}</label>
+					{{/if}}
+					<div class="resource-content">
+						<input type="text" name="system.skills.geral.{{id}}.value" value="{{skill.value}}" data-dtype="Number" placeholder="0">
+					</div>
+				</div>
+				{{/each}}
+			</div>
+		</div>
+
+		<div class="sociais flex-1">
+			<h3 class="section-title">Perícias Sociais</h3>
+			<div class="resource-content">
+				{{#each system.skills.social as |skill id|}}
+				<div class="resource-npc">
+					<label class="resource-label {{id}} rollable" data-roll-type="skill" data-key="{{id}}">{{label}}</label>
+					<div class="resource-content">
+						<input type="text" name="system.skills.social.{{id}}.value" value="{{skill.value}}" data-dtype="Number" placeholder="0">
+					</div>
+				</div>
+				{{/each}}
+			</div>
+		</div>
+	</section>

@@ -1,0 +1,550 @@
+{
+  "shinobiNoSho": {
+		"creditos": "Créditos",
+		"discord": "Discord",
+		"nome": "Shinobi no Sho (SnS)",
+		"configuracoesVersao": "Versão do Sistema",
+		"social": {
+			"discordLivro": "Discord do Livro",
+			"discordForja": "Forja dos Narradores",
+			"twitter": "Twitter",
+			"site": "Site Oficial"
+		},
+    "ability": {
+      "for": { "long": "Força", "abbr": "For" },
+      "des": { "long": "Destreza", "abbr": "Des" },
+      "agi": { "long": "Agilidade", "abbr": "Agi" },
+      "per": { "long": "Percepção", "abbr": "Per" },
+      "int": { "long": "Inteligência", "abbr": "Int" },
+      "vig": { "long": "Vigor", "abbr": "Vig" },
+			"esp": { "long": "Espírito", "abbr": "Esp" },
+			"car": { "long": "Carisma", "abbr": "Car" },
+			"man": { "long": "Manipulação", "abbr": "Man" }
+    },
+		"combatAbilities": {
+			"CC": "Combate Corporal",
+      "CD": "Combate à Distância",
+      "E": "Esquiva",
+      "LM": "Ler Movimentos"
+		},
+    "SheetLabels": {
+      "Ninja": "Shinobi Actor Sheet",
+      "Item": "Shinobi Item Sheet"
+    },
+		"tamanhos": {
+			"minusculo": "Minúsculo",
+			"diminuto": "Diminuto",
+			"miudo": "Miúdo",
+			"pequeno": "Pequeno",
+			"medio": "Médio",
+			"grande": "Grande",
+			"enorme": "Enorme",
+			"imenso": "Imenso",
+			"colossal": "Colossal",
+			"incrivel": "Incrível"
+		},
+    "Item": {
+			"descricaoLabel": "Descrição",
+			"efeitosLabel": "Efeitos",
+			"caracteristicasLabel": "Características",
+			"compartimentos": { "long": "Compartimentos", "abbr": "Compart." },
+			"preco": "Preço",
+			"raridade": "Raridade",
+			"detalhesLabel": "Detalhes",
+			"detalhesGeraisLabel": "Detalhes Gerais",
+			"preRequisito": "Pré-requisito",
+			"quantidade": { "long": "Quantidade", "abbr": "Qtd" },
+			"detalhesGerais": "Detalhes Gerais",
+			"nivel": "Nível",
+			"dano": "Dano",
+			"alcance": "Alcance",
+			"critico": "Crítico",
+			"dureza": "Dureza",
+      "aptidoes": {
+				"tipoAptidao": "Tipo de Aptidão",
+				"nivelAptidao": "Nível de Aptidão"
+			},
+			"armaduras": {
+				"tipoArmadura": "Tipo de Armadura",
+				"bonusAbsorcao": "Bônus de Absorção",
+				"penalidadeArmadura": "Penalidade de Armadura"
+			},
+			"armas": {
+				"combate": "Combate",
+				"testeAtaque": "Teste de Ataque",
+				"adicionarBonus": "Adicionar Bônus",
+				"tipoArma": "Tipo de Arma",
+				"subtipoArma": "Subtipo de Arma",
+				"tamanho": "Tamanho",
+				"improvisada": "Improvisada",
+				"armaDupla": "Arma Dupla",
+				"arremessavel": "Arremessável",
+				"duasMaos": "Duas Mãos",
+				"energizavel": "Energizável",
+				"ambidestra": "Ambidestra",
+				"acuidade": "Acuidade"
+			},
+			"itensGerais": {
+				"tipoItemGeral": "Tipo de Item"
+			},
+			"poderes": {
+				"nivelPoder": "Nível de Poder",
+				"efeitosAdquiridos": "Efeitos Adquiridos",
+				"nomeEfeitoAdquirido": "Nome do Efeito Adquirido",
+				"adicionarEfeitoAdquirido": "Adicionar Efeito Adquirido"
+			},
+			"tecnicas": {
+				"alternativo": "Alternativo",
+				"origem": "Origem",
+				"combate": "Combate",
+				"efeitosOuAptidoes": "Efeitos ou Aptidões",
+				"duracao": "Duração",
+				"areaEfeito": "Área de Efeito",
+				"alcance": "Alcance",
+				"acao": "Ação",
+				"alvo": "Alvo",
+				"testeResistencia": "Teste de Resistência",
+				"tipoTecnica": "Tipo de Técnica",
+				"subtipoTecnica": "Subtipo de Técnica",
+				"custoChakra": "Custo de Chakra",
+				"elemento": "Elemento",
+				"tipoJutsu": "Tipo de Jutsu",
+				"ranking": "Ranking",
+				"selosDeMao": "Selos de Mão",
+				"escalonaComChakra": "Escalona com Chakra"
+			}
+    },
+    "Effect": {
+      "Source": "Fonte",
+      "Toggle": "Alternar efeito",
+      "Temporary": "Efeitos temporários",
+      "Passive": "Efeitos passivos",
+      "Inactive": "Efeitos inativos"
+    },
+		"TYPES": {
+			"Actor": {
+				"Ninja": "Ninja",
+				"NPC": "NPC"
+			},
+			"Item": {
+				"armas": "Armas",
+				"armaduras": "Armaduras",
+				"gerais": "Itens Gerais",
+				"aptidoes": "Aptidões",
+				"poderes": "Poderes",
+				"tecnicas": "Técnicas"
+			}
+ 	 },
+		"NinjaSheet": {
+			"vida": "Pontos de Vida",
+			"nome": "Nome",
+			"tipo": "Tipo",
+			"nivel": "Nível",
+			"preRequisito": "Pré-requisito",
+			"nivelCampanha": "Nível (NC)",
+			"nivelShinobi": "Nível Shinobi",
+			"cla": "Clã",
+			"idade": "Idade",
+			"vilaOrigem": "Vila de Origem",
+			"generoLabel": "Gênero",
+			"tendenciaLabel": "Tendência",
+			"lateralidadeLabel": "Lateralidade",
+			"vilaAtuante": "Vila Atuante",
+			"naturezaPrincipal": { "long": "Natureza Principal", "abbr": "Natureza Pr." },
+			"naturezaSecundaria": { "long": "Natureza Secundária", "abbr": "Natureza Sc." },
+			"atual": "Atual",
+			"max": { "long": "Máximo", "abbr": "Max" },
+			"vitalidade": "Vitalidade",
+			"chakra": "Chakra",
+			"absorcao": "Absorção",
+			"quantidade": "Quantidade",
+			"biografiaLabel": "Biografia",
+			"combateLabel": "Combate",
+			"periciasLabel": "Perícias",
+			"aptidoesLabel": "Aptidões",
+			"poderesLabel": "Poderes",
+			"tecnicasLabel": "Técnicas",
+			"inventarioLabel": "Inventário",
+			"anotacoesLabel": "Anotações",
+			"efeitosLabel": "Efeitos",
+			"periciasGerais": "Perícias Gerais",
+			"periciasSociais": "Perícias Sociais",
+			"lateralidade": {
+				"destro": "Destro",
+				"canhoto": "Canhoto",
+				"ambidestro": "Ambidestro"
+			},
+			"tendencia": {
+				"lealBondoso": "Leal e Bondoso",
+				"neutroBondoso": "Neutro e Bondoso",
+				"caoticoBondoso": "Caótico e Bondoso",
+				"lealNeutro": "Leal e Neutro",
+				"neutro": "Neutro",
+				"caoticoNeutro": "Caótico e Neutro",
+				"lealMaligno": "Leal e Maligno",
+				"neutroMaligno": "Neutro e Maligno",
+				"caoticoMaligno": "Caótico e Maligno"
+			},
+			"genero": {
+				"masculino": "Masculino",
+				"feminino": "Feminino"
+			},
+			"biografia": {
+				"historia": "História",
+				"caracteristicas": "Características",
+				"relacoes": "Relações",
+				"descricaoFisica": "Descrição Física",
+				"maniasPeculiaridades": "Manias e Peculiaridades",
+				"filosofiaDeVida": "Filosofia de Vida",
+				"relacoesImportantes": "Relações Importantes",
+				"parentesco": "Parentesco",
+				"nome": "Nome",
+				"idade": "Idade",
+				"genero": "Gênero",
+				"carreira": "Carreira",
+				"adicionarRelacao": "Adicionar uma relação"
+			},
+			"habilidadesCombate": {
+				"label": "Habilidades de Combate",
+				"base": "Base",
+				"atributo": "Atributo",
+				"combateCorporal": "Combate Corporal (CC)",
+				"combateDistancia": "Combate à Distância (CD)",
+				"esquiva": "Esquiva",
+				"lerMovimento": "Ler Movimento (LM)"
+			},
+			"estatisticasCombate": {
+				"label": "Estatísticas de Combate",
+				"pericia": "Perícia",
+				"variável": "Variável",
+				"iniciativa": "Iniciativa",
+				"reacaoEsquiva": "Reação de Esquiva",
+				"deslocamento": "Deslocamento"
+			},
+			"inventario": {
+				"ryos": "Ryos",
+				"tipoDano": "Tipo de Dano",
+				"alcance": "Alcance",
+				"penalidade": "Penalidade",
+				"absorcao": "Absorção"
+			},
+			"pericias": {
+				"periciasTreinoLegenda": "+: perícias que necessitam treinamento.",
+				"periciasArmaduraLegenda": "*: perícias que são afetadas por armadura.",
+				"atributosSociais": "Atributos Sociais",
+				"manipulacao": "Manipulação",
+				"carisma": "Carisma"
+			},
+			"tecnicas": {
+				"origem": "Origem",
+				"alcance": "Alcance",
+				"acao": "Ação",
+				"duracao": "Duração"
+			}
+		},
+		"skills": {
+			"geral": {
+				"acrobacia": "Acrobacia",
+				"arte": "Arte",
+				"atletismo": "Atletismo",
+				"ciencias": "Ciências",
+				"cultura": "Cultura",
+				"ocultismo": "Ocultismo",
+				"concentracao": "Concentração",
+				"disfarces": "Disfarces",
+				"escapar": "Escapar",
+				"furtividade": "Furtividade",
+				"animais": "Lidar com Animais",
+				"mecanismos": "Mecanismos",
+				"medicina": "Medicina",
+				"prestidigitacao": "Prestidigitação",
+				"procurar": "Procurar",
+				"prontidao": "Prontidão",
+				"rastrear": "Rastrear",
+				"veneficio": "Venefício+",
+				"voo": "Voo",
+				"pericia_1": "Perícia Livre"
+			},
+			"social": {
+				"atuacao": "Atuação",
+				"mudarAtitude": "Mudar Atitude",
+				"barganha": "Barganha",
+				"blefar": "Blefar",
+				"intimidacao": "Intimidação",
+				"obterInfo": "Obter Informação"
+			}
+		},
+		"skillsAbbr": {
+			"geral": {
+				"animais": "Animais"
+			},
+			"social": {
+				"obterInfo": "Obter Info."
+			}
+		},
+		"ITEMS": {
+				"aptidoes": {
+					"tipoAptidao": {
+						"combate": "Combate",
+						"manobra": "Manobra",
+						"geral": "Geral",
+						"tecnica": "Técnica",
+						"shinobi": "Shinobi",
+						"restrita": "Restrita",
+						"especial": "Especial"
+					}
+				},
+				"tecnicas": {
+					"tipoCustoChakra": {
+						"numero": "Número"
+					},
+					"origem": {
+						"aptidao": "Aptidão",
+						"poder": "Poder",
+						"tecnica": "Técnica",
+						"arma": "Arma",
+						"armadura": "Armadura",
+						"geral": "Item Geral"
+					},
+					"areaEfeito": {
+						"cone": "Cone",
+						"circulo": "Círculo",
+						"cilindro": "Cilindro",
+						"esfera": "Esfera",
+						"linha": "Linha",
+						"onda": "Onda",
+						"outro": "Outro"
+					},
+					"tipo": {
+						"projetil": "Projétil",
+						"area": "Ataque em Área",
+						"suporte": "Suporte",
+						"corpoacorpo": "Corpo-a-Corpo",
+						"toque": "Toque",
+						"aflicao": "Aflição",
+						"compulsao": "Compulsão",
+						"fantasma": "Fantasma"
+					},
+					"subtipo": {
+						"controleChakra": "Controle de Chakra",
+						"kinjutsu": "Kinjutsu",
+						"hijutsu": "Hijutsu",
+						"jikuukan": "Jikuukan",
+						"shunjutsu": "Shunjutsu",
+						"outro": "Outro"
+					},
+					"tipoJutsu": {
+						"ninjutsu": "Ninjutsu",
+						"genjutsu": "Genjutsu",
+						"taijutsu": "Taijutsu"
+					},
+					"elemento": {
+						"katon": "Katon",
+						"fuuton": "Fuuton",
+						"raiton": "Raiton",
+						"doton": "Doton",
+						"suiton": "Suiton",
+						"outro": "Outro"
+					},
+					"ranking": {
+						"e": "E",
+						"d": "D",
+						"c": "C",
+						"b": "B",
+						"a": "A",
+						"s": "S"
+					},
+					"duracao": {
+						"instantanea": "Instantânea",
+						"concentracao": "Concentração",
+						"sustentada": "Sustentada",
+						"continua": "Contínua",
+						"permanente": "Permanente",
+						"vertexto": "Ver Texto"
+					}
+				},
+				"armas": {
+					"tipoDano": {
+						"corte": "Corte",
+						"perfuracao": "Perfuração",
+						"esmagamento": "Esmagamento",
+						"fogo": "Fogo"
+					},
+					"tipo": {
+						"natural": "Natural",
+						"simples": "Simples",
+						"marcial": "Marcial",
+						"especial": "Especial"
+					},
+					"subtipo": {
+						"leve": "Arma Leve",
+						"mediana": "Arma Mediana",
+						"longa": "Arma Longa",
+						"pesada": "Arma Pesada",
+						"arremesso": "Arma de Arremesso",
+						"disparo": "Arma de Disparo",
+						"explosivo": "Explosivo",
+						"municao": "Munição"
+					}
+				},
+				"armaduras": {
+					"tipo": {
+						"leve": "Armadura Leve",
+						"pesada": "Armadura Pesada"
+					},
+					"tipoAbbr": {
+						"leve": "Leve",
+						"pesada": "Pesada"
+					}
+				},
+				"geral": {
+					"tipo": {
+						"comum": "Comum",
+						"animais": "Animal",
+						"veiculos": "Veículo",
+						"dispositivoLeve": "Dispositivo Leve",
+						"dispositivoPadrao": "Dispositivo Padrão",
+						"dispositivoPesado": "Dispositivo Pesado"
+					},
+					"tipoAbv": {
+						"comum": "Comum",
+						"animais": "Animal",
+						"veiculos": "Veículo",
+						"servicos": "Serviços",
+						"dispositivoLeve": "Leve",
+						"dispositivoPadrao": "Padrão",
+						"dispositivoPesado": "Pesado"
+					}
+				},
+				"generico": {
+					"alcance": {
+						"pessoal": "Pessoal",
+						"toque": "Toque",
+						"distancia": "Distância"
+					},
+					"acao": {
+						"padrao": "Padrão",
+						"movimento": "Movimento",
+						"parcial": "Parcial",
+						"livre": "Livre",
+						"reacao": "Reação",
+						"completa": "Completa",
+						"vertexto": "Ver Texto"
+					},
+					"rarity": {
+						"common": "Comum",
+						"uncommon": "Incomum",
+						"rare": "Raro",
+						"veryrare": "Muito Raro",
+						"legendary": "Lendário",
+						"artifact": "Mítico"
+					}
+				},
+				"areas": {
+					"onda": "Onda",
+					"linha": "Linha",
+					"esfera": "Esfera",
+					"cilindro": "Cilindro",
+					"circulo": "Círculo",
+					"cone": "Cone",
+					"meiaEsfera": "Meia esfera"
+				},
+				"regraDeArea": {
+					"porEspirito": "Por Espírito",
+					"porInteligencia": "Por Inteligência",
+					"porArte": "Por Arte",
+					"porLidarAnimais": "Por Lidar com Animais",
+					"porMecanismos": "Por Mecanismo",
+					"porRastrear": "Por Rastrear",
+					"custom": "Customizado"
+				}
+			}
+  },
+	"WORLD": {
+		"GameSystem": "Sistema"
+	},
+	"EFFECT": {
+		"TabDuration": "Duração"
+	},
+	"SETTINGS": {
+		"changeSizeOfTokensDynamically": "Ativar Mudança Dinâmica de Tamanho de Token",
+		"changeSizeOfTokensDynamicallyHint": "Essa configuração define se os tokens terão seu tamanho alterado de acordo com o tamanho definido em ficha."
+	},
+	"DOCUMENT.Create": "Criar novo(a) {type}",
+  "DOCUMENT.Delete": "Excluir {type}",
+  "DOCUMENT.New": "Novo(a) {type}",
+  "DOCUMENT.Update": "Atualizar {type}",
+  "DOCUMENT.SkipCreate": "Pular Criação",
+  "DOCUMENT.ImportData": "Importar Dados",
+  "DOCUMENT.ImportDataError": "Você não enviou um arquivo de dados!",
+  "DOCUMENT.ImportDataHint1": "Você pode importar dados para este {document} de um arquivo JSON exportado.",
+  "DOCUMENT.ImportDataHint2": "Esta operação atualizará os dados de {name} e não poderá ser desfeita.",
+  "DOCUMENT.ImportSource": "Fonte de Dados",
+  "DOCUMENT.Imported": "Os dados para {document} \"{name}\" foram importados com sucesso do JSON.",
+  "DOCUMENT.SheetPermissionWarn": "Você não tem permissão para visualizar este {document}.",
+  "DOCUMENT.UsePermissionWarn": "Você não tem permissão para usar este {document}.",
+  "DOCUMENT.IdCopiedClipboard": "{label} {type} \"{id}\" copiado para a área de transferência.",
+  "DOCUMENT.ActiveEffect": "Efeito Ativo",
+  "DOCUMENT.ActiveEffects": "Efeitos Ativos",
+  "DOCUMENT.ActorDelta": "Delta do Ator",
+  "DOCUMENT.ActorDeltas": "Deltas do Ator",
+  "DOCUMENT.Actor": "Ator",
+  "DOCUMENT.Actors": "Atores",
+  "DOCUMENT.Adventure": "Aventura",
+  "DOCUMENT.Adventures": "Aventuras",
+  "DOCUMENT.AmbientLight": "Luz Ambiente",
+  "DOCUMENT.AmbientLights": "Luzes Ambientes",
+  "DOCUMENT.AmbientSound": "Som Ambiente",
+  "DOCUMENT.AmbientSounds": "Sons Ambientes",
+  "DOCUMENT.Card": "Carta",
+  "DOCUMENT.Cards": "Baralho",
+  "DOCUMENT.CardsPlural": "Baralhos",
+  "DOCUMENT.ChatMessage": "Mensagem de Chat",
+  "DOCUMENT.ChatMessages": "Mensagens de Chat",
+  "DOCUMENT.Combat": "Encontro de Combate",
+  "DOCUMENT.Combats": "Encontros de Combate",
+  "DOCUMENT.Combatant": "Combatente",
+  "DOCUMENT.Combatants": "Combatentes",
+  "DOCUMENT.CopyOf": "{name} (Cópia)",
+  "DOCUMENT.Drawing": "Desenho",
+  "DOCUMENT.Drawings": "Desenhos",
+  "DOCUMENT.Folder": "Pasta",
+  "DOCUMENT.Folders": "Pastas",
+  "DOCUMENT.Item": "Item",
+  "DOCUMENT.Items": "Itens",
+  "DOCUMENT.JournalEntry": "Registro de Diário",
+  "DOCUMENT.JournalEntries": "Diário",
+  "DOCUMENT.JournalEntryPage": "Página",
+  "DOCUMENT.JournalEntryPages": "Páginas",
+  "DOCUMENT.Macro": "Macro",
+  "DOCUMENT.Macros": "Macros",
+  "DOCUMENT.MeasuredTemplate": "Modelo de Medição",
+  "DOCUMENT.MeasuredTemplates": "Modelos de Medição",
+  "DOCUMENT.Note": "Nota",
+  "DOCUMENT.Notes": "Notas",
+  "DOCUMENT.Playlist": "Playlist",
+  "DOCUMENT.Playlists": "Listas de Reprodução",
+  "DOCUMENT.PlaylistSound": "Som da Playlist",
+  "DOCUMENT.PlaylistSounds": "Sons da Playlist",
+  "DOCUMENT.Scene": "Cena",
+  "DOCUMENT.Scenes": "Cenas",
+  "DOCUMENT.Setting": "Configuração",
+  "DOCUMENT.Settings": "Configurações",
+  "DOCUMENT.RollTable": "Tabela de Rolagem",
+  "DOCUMENT.RollTables": "Tabelas de Rolagem",
+  "DOCUMENT.Region": "Região",
+  "DOCUMENT.Regions": "Regiões",
+  "DOCUMENT.RegionBehavior": "Comportamento da Região",
+  "DOCUMENT.RegionBehaviors": "Comportamentos da Região",
+  "DOCUMENT.TableResult": "Resultado da Tabela",
+  "DOCUMENT.TableResults": "Resultados da Tabela",
+  "DOCUMENT.Tile": "Peça",
+  "DOCUMENT.Tiles": "Peças",
+  "DOCUMENT.Token": "Token",
+  "DOCUMENT.Tokens": "Tokens",
+  "DOCUMENT.User": "Usuário",
+  "DOCUMENT.Users": "Usuários",
+  "DOCUMENT.Wall": "Parede",
+  "DOCUMENT.Walls": "Paredes",
+  "DOCUMENT.TypePageFormat": "{page} de {type}"
+}

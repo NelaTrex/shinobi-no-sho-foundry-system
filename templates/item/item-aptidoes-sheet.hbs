@@ -1,0 +1,82 @@
+<form id="aptidao" class="{{cssClass}} flexcol" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Nome"/></h1>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="descricao">Descrição</a>
+    <a class="item" data-tab="caracteristicas">Características</a>
+		<a class="item" data-tab="detalhes">Detalhes</a>
+    <a class="item" data-tab="efeitos">Efeitos</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Description Tab --}}
+    <div class="tab" data-group="primary" data-tab="descricao">
+			<div class="content">
+				<div style="margin-top: 10px;">
+					<h3 class="section-title">Descrição</h3>
+					{{editor system.descricao target="system.descricao" 
+				rollData=rollData button=true owner=owner editable=editable}}
+				</div>
+			</div>
+    </div>
+
+    {{!-- Characteristics Tab --}}
+    <div class="tab caracteristicas" data-group="primary" data-tab="caracteristicas">
+			<div class="content">
+				<div style="margin-top: 10px;">
+					<h3 class="section-title">Características</h3>
+					{{editor system.caracteristicas target="system.caracteristicas" 
+				rollData=rollData button=true owner=owner editable=editable}}
+				</div>
+			</div>
+    </div>
+
+		{{!-- Details Tab --}}
+		<div class="tab detalhes" data-group="primary" data-tab="detalhes">
+			<div class="content">
+				<div class="flex flex-group-center">
+					<div class="resource flex flex-3">
+						<label for="system.tipoAptidao" class="resource-label p-r-10">Tipo de Aptidão</label>
+						<div class="resource-content">
+							<select name="system.tipoAptidao">
+								{{selectOptions itemsDropdown.aptidoes.tipoAptidao 
+								selected=system.tipoAptidao 
+								localize=true blank="—"}}
+							</select>
+						</div>
+					</div>
+					<div class="resource flex flex-2">
+							<label for="system.nivelAptidao" class="resource-label p-r-10">Nível de Aptidão</label>
+							<div class="resource-content">
+								<input type="text" name="system.nivelAptidao" 
+								value="{{system.nivelAptidao}}" data-dtype="String"/>
+							</div>
+					</div>
+				</div>
+				<div class="resource flex">
+					<label for="system.preRequisito" class="resource-label p-r-10">Pré-requisito</label>
+					<div class="resource-content">
+						<input type="text" name="system.preRequisito" 
+						value="{{system.preRequisito}}" data-dtype="String"/>
+					</div>
+				</div>
+			</div>
+    </div>
+
+    {{!-- Effects Tab --}}
+    <div class="tab efeitos" data-group="primary" data-tab="efeitos">
+			<div class="content">
+				{{> "systems/shinobinosho/templates/item/parts/item-efeitos.hbs"}}
+			</div>
+    </div>
+  </section>
+
+</form>

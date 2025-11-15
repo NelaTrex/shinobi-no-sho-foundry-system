@@ -1,0 +1,79 @@
+<div class="tab parceiros flexcol" data-group="primary" data-tab="parceiros">
+    
+    <section class="container flexcol">
+        <div class="inventory-header flexrow">
+            <h3 class="item-name flex-2">
+                {{localize "shinobiNoSho.ItemType.kuchiyose.plural"}} (Invocações)
+            </h3>
+            <div class="item-controls flex-1">
+                <a class="item-control item-create" title="{{localize 'shinobiNoSho.ItemType.kuchiyose.singular'}}" data-type="poderes" data-subtype="kuchiyose">
+                    <i class="fas fa-plus"></i> {{localize "shinobiNoSho.Common.adicionar"}}
+                </a>
+            </div>
+        </div>
+        
+        <ol class="inventory-list flexcol">
+            {{#each poderes as |item i|}}
+                {{#if (eq item.system.tipo "kuchiyose")}}
+                    <li class="item flexrow" data-item-id="{{item._id}}">
+                        <div class="item-name flex-2 flexrow">
+                            <div class="item-image" style="background-image: url('{{item.img}}')"></div>
+                            <h4 class="flex-grow">{{item.name}} (Nível: {{item.system.nivelPoder}})</h4>
+                        </div>
+                        
+                        <div class="item-controls flex-1">
+                            <a class="item-control item-edit" title="{{localize 'shinobiNoSho.Common.editar'}}">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a class="item-control item-delete" title="{{localize 'shinobiNoSho.Common.deletar'}}">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </div>
+                    </li>
+                {{/if}}
+            {{/each}}
+        </ol>
+    </section>
+
+    <hr>
+
+    <section class="container flexcol">
+        <div class="inventory-header flexrow">
+            <h3 class="item-name flex-2">
+                {{localize "shinobiNoSho.ItemType.kugutsu.plural"}} (Marionetes)
+            </h3>
+            <div class="item-controls flex-1">
+                <a class="item-control item-create" title="{{localize 'shinobiNoSho.ItemType.kugutsu.singular'}}" data-type="poderes" data-subtype="kugutsu">
+                    <i class="fas fa-plus"></i> {{localize "shinobiNoSho.Common.adicionar"}}
+                </a>
+            </div>
+        </div>
+        
+        <ol class="inventory-list flexcol">
+            {{#each poderes as |item i|}}
+                {{#if (eq item.system.tipo "kugutsu")}}
+                    <li class="item flexrow" data-item-id="{{item._id}}">
+                        <div class="item-name flex-2 flexrow">
+                            <div class="item-image" style="background-image: url('{{item.img}}')"></div>
+                            <h4 class="flex-grow">{{item.name}}</h4>
+                        </div>
+                        
+                        <div class="item-controls flex-1">
+                            <a class="item-control item-edit" title="{{localize 'shinobiNoSho.Common.editar'}}">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a class="item-control item-delete" title="{{localize 'shinobiNoSho.Common.deletar'}}">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </div>
+                    </li>
+                {{/if}}
+            {{/each}}
+        </ol>
+    </section>
+
+    <p class="notes" style="padding: 10px; font-size: 12px; text-align: center;">
+        *Este painel lista Itens do tipo "Poder" com subtipo Kugutsu ou Kuchiyose. Você pode usar itens separados do tipo "NPC" para detalhes completos da ficha do parceiro.
+    </p>
+
+</div>

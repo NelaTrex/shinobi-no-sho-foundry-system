@@ -1,0 +1,22 @@
+{
+	"plugins": [],
+	"release-type": "node",
+	"packages": {
+		".": {
+			"release-type": "node",
+			"include-component-in-tag": false,
+			"group-pull-request-title-pattern": "chore: release-${version}",
+			"pull-request-header": ":robot: Release candidate PR :rocket:",
+			"changelog-path": "CHANGELOG.md",
+			"options": {},
+			"extra-files": [
+				"system.json",
+				{
+					"type": "json",
+					"path": "system.json",
+					"jsonpath": "$.version"
+				}
+			]
+		}
+	}
+}

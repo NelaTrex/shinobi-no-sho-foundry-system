@@ -1,0 +1,1149 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+.inputCenter {
+  text-align: center !important;
+}
+
+/* Global styles */
+.window-app {
+  font-family: "Roboto", sans-serif;
+}
+
+.rollable:hover, .rollable:focus {
+  color: #000;
+  text-shadow: 0 0 10px red;
+  cursor: pointer;
+}
+
+.grid,
+.grid-2col {
+  display: grid;
+  grid-column: span 2/span 2;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.grid-3col {
+  grid-column: span 3/span 3;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-4col {
+  grid-column: span 4/span 4;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-5col {
+  grid-column: span 5/span 5;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid-6col {
+  grid-column: span 6/span 6;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.grid-7col {
+  grid-column: span 7/span 7;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.grid-8col {
+  grid-column: span 8/span 8;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.grid-9col {
+  grid-column: span 9/span 9;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+
+.grid-10col {
+  grid-column: span 10/span 10;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+
+.grid-11col {
+  grid-column: span 11/span 11;
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+}
+
+.grid-12col {
+  grid-column: span 12/span 12;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.grid-start-2 {
+  grid-column-start: 2;
+}
+
+.grid-start-3 {
+  grid-column-start: 3;
+}
+
+.grid-start-4 {
+  grid-column-start: 4;
+}
+
+.grid-start-5 {
+  grid-column-start: 5;
+}
+
+.grid-start-6 {
+  grid-column-start: 6;
+}
+
+.grid-start-7 {
+  grid-column-start: 7;
+}
+
+.grid-start-8 {
+  grid-column-start: 8;
+}
+
+.grid-start-9 {
+  grid-column-start: 9;
+}
+
+.grid-start-10 {
+  grid-column-start: 10;
+}
+
+.grid-start-11 {
+  grid-column-start: 11;
+}
+
+.grid-start-12 {
+  grid-column-start: 12;
+}
+
+.grid-span-2 {
+  grid-column-end: span 2;
+}
+
+.grid-span-3 {
+  grid-column-end: span 3;
+}
+
+.grid-span-4 {
+  grid-column-end: span 4;
+}
+
+.grid-span-5 {
+  grid-column-end: span 5;
+}
+
+.grid-span-6 {
+  grid-column-end: span 6;
+}
+
+.grid-span-7 {
+  grid-column-end: span 7;
+}
+
+.grid-span-8 {
+  grid-column-end: span 8;
+}
+
+.grid-span-9 {
+  grid-column-end: span 9;
+}
+
+.grid-span-10 {
+  grid-column-end: span 10;
+}
+
+.grid-span-11 {
+  grid-column-end: span 11;
+}
+
+.grid-span-12 {
+  grid-column-end: span 12;
+}
+
+.flex-group-center,
+.flex-group-left,
+.flex-group-right {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.flex-group-left {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.flex-group-right {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.flexshrink {
+  flex: 0;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flexlarge {
+  flex: 2;
+}
+
+.align-left {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.align-right {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.align-center {
+  justify-content: center;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
+/* Sidebar */
+.shinobi.system-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.shinobi.system-badge img {
+  margin-top: 16px;
+  border: 0;
+}
+.shinobi.system-badge p {
+  margin: 0;
+}
+.shinobi.system-badge a[href] {
+  color: var(--color-text-light-highlight);
+  text-decoration: none;
+}
+.shinobi.sidebar-heading {
+  margin: 6px 0;
+  margin-bottom: 0 !important;
+  border-top: 1px solid var(--color-border-dark-4);
+  border-bottom: 1px solid var(--color-border-dark-4);
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+}
+.shinobi.sidebar-heading .links {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  font-size: 10px;
+}
+.shinobi.sidebar-heading h2 {
+  background-color: initial;
+  border: initial;
+  margin: 0;
+  font-size: 12px;
+}
+
+.no-orange-hyperlink a {
+  color: initial;
+  text-decoration: underline;
+}
+
+/* Dice */
+#d8roll .dice-flavor {
+  text-align: left !important;
+  color: var(--color-text-dark-secondary);
+  line-height: 20px;
+}
+#d8roll .dice-flex {
+  width: 100%;
+}
+#d8roll .grid {
+  gap: 5px;
+  margin: 0;
+}
+#d8roll .itsCritical .dice-total {
+  border: #006c00 1px solid;
+  background-color: #c7d0c0;
+  color: inherit;
+}
+#d8roll .itsFailure .dice-total {
+  border: #6e0000 1px solid;
+  background-color: #ffdddd;
+  color: inherit;
+}
+#d8roll .degree {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.dice-total {
+  border-radius: 3px;
+  padding: 0.25rem;
+}
+
+/* Area Template Application */
+#areaTemplate {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#areaTemplate legend {
+  font-size: 15px;
+  font-weight: bold;
+}
+#areaTemplate fieldset {
+  display: flex;
+  gap: 0.1rem;
+  border-radius: 8px;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+#areaTemplate .predefinedAreas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-top: 10px;
+}
+#areaTemplate .area {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 6px 12px;
+  gap: 5px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 240, 0.8);
+  border: 1px solid #aaaaaa;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  text-align: start;
+}
+#areaTemplate .area span, #areaTemplate .area i {
+  pointer-events: none;
+  padding: 0 1px !important;
+}
+#areaTemplate .adjusts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+#areaTemplate .adjusts .numberSelector {
+  display: flex;
+  gap: 2px;
+}
+#areaTemplate .adjusts .numberSelector button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 28px;
+  background: rgba(255, 255, 240, 0.8);
+  border: 1px solid #b5b3a4;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+}
+#areaTemplate .adjusts .numberSelector input {
+  min-width: 30px;
+}
+#areaTemplate .adjusts .hint {
+  font-size: 14px;
+  margin: 0;
+}
+#areaTemplate .submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 38px;
+  background: rgba(255, 255, 240, 0.8);
+  border: 1px solid #b5b3a4;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+  margin: 0;
+}
+#areaTemplate .submit i {
+  padding: 4px;
+}
+
+.itemAreaTemplate #areaTemplate {
+  gap: 0.2rem !important;
+}
+.itemAreaTemplate .predefinedAreas {
+  padding: 0 !important;
+}
+.itemAreaTemplate input {
+  width: auto;
+}
+.itemAreaTemplate input[type=text] {
+  min-width: 30px !important;
+  width: auto !important;
+  text-align: center !important;
+}
+
+.areaTemplateWindow {
+  box-shadow: 0 0 10x #000 !important;
+  font-family: "Signika", "Roboto", sans-serif;
+}
+.areaTemplateWindow .window-header {
+  font-size: 13px;
+}
+
+/* Styles limited to shinobiNoSho sheets */
+.shinobiNoSho {
+  /* Chat */
+}
+.shinobiNoSho .actor {
+  min-width: 600px !important;
+  min-height: 820px !important;
+}
+.shinobiNoSho .item-form {
+  font-family: "Roboto", sans-serif;
+}
+.shinobiNoSho .window-content {
+  overflow: hidden;
+}
+.shinobiNoSho .sheet-header, .shinobiNoSho .atributos,
+.shinobiNoSho .acessoRapido {
+  border: 1px solid #949494;
+  border-radius: 4px;
+  padding: 6px;
+}
+.shinobiNoSho .sheet-header select, .shinobiNoSho .atributos select,
+.shinobiNoSho .acessoRapido select {
+  width: 100%;
+}
+.shinobiNoSho .sheet-header {
+  flex: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 6px;
+}
+.shinobiNoSho .sheet-header .profile-img {
+  flex: 0 0 100px;
+  height: 125px;
+  margin-right: 10px;
+}
+.shinobiNoSho .sheet-header .header-fields {
+  flex: 2;
+}
+.shinobiNoSho .sheet-header .header-fields input, .shinobiNoSho .sheet-header .header-fields select {
+  height: 27px;
+  margin-bottom: 2px;
+}
+.shinobiNoSho .sheet-header .header-fields .resources {
+  grid-row-gap: 80px;
+}
+.shinobiNoSho .sheet-header .profile {
+  flex: 1;
+  padding-right: 10px;
+}
+.shinobiNoSho .sheet-header h1.charname {
+  height: 50px;
+  padding: 0px;
+  margin: 5px 0;
+  border-bottom: 0;
+}
+.shinobiNoSho .sheet-header h1.charname input {
+  min-width: 235px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.shinobiNoSho .pericias-sheet-tabs {
+  margin-top: 0px !important;
+}
+.shinobiNoSho .sheet-tabs, .shinobiNoSho .pericias-sheet-tabs {
+  flex: 0;
+  font-size: small;
+}
+.shinobiNoSho .sheet-tabs .item, .shinobiNoSho .pericias-sheet-tabs .item {
+  padding: 8px !important;
+}
+.shinobiNoSho .sheet-body,
+.shinobiNoSho .sheet-body .tab,
+.shinobiNoSho .sheet-body .tab .editor {
+  height: 100%;
+}
+.shinobiNoSho .tab {
+  overflow-y: hidden;
+  height: 100%;
+  align-content: flex-start;
+  padding-right: 2px;
+}
+.shinobiNoSho .sheet-body {
+  overflow: hidden;
+}
+.shinobiNoSho .window-content {
+  overflow-y: hidden;
+}
+.shinobiNoSho form {
+  height: 100%;
+  overflow: hidden;
+}
+.shinobiNoSho .content {
+  height: 100%;
+  overflow-y: auto;
+}
+.shinobiNoSho .tox .tox-editor-container {
+  background: #fff;
+}
+.shinobiNoSho .tox .tox-edit-area {
+  padding: 0 8px;
+}
+.shinobiNoSho #middle-content {
+  flex: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  height: 80px;
+  gap: 6px;
+}
+.shinobiNoSho #middle-content .atributos {
+  flex: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.shinobiNoSho #middle-content .atributos input {
+  font-size: large;
+}
+.shinobiNoSho #middle-content .atributos .resource {
+  width: 40px;
+}
+.shinobiNoSho #middle-content .acessoRapido {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.shinobiNoSho #middle-content .acessoRapido .resource-content {
+  justify-content: center;
+  gap: 2px;
+}
+.shinobiNoSho #middle-content .acessoRapido .resource-content input {
+  width: 35px;
+  height: 30px;
+}
+.shinobiNoSho #middle-content .resource input {
+  width: 35px;
+  height: 35px;
+}
+.shinobiNoSho #middle-content .resource label {
+  font-size: 11px;
+  font-weight: 400;
+}
+.shinobiNoSho .section-title {
+  border: none;
+  text-align: center;
+  background-color: #BEBEBE;
+}
+.shinobiNoSho .sub-body .tab {
+  gap: 5px;
+}
+.shinobiNoSho .sub-body .tab .row {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+.shinobiNoSho .sub-body .tab .descricao .editor,
+.shinobiNoSho .sub-body .tab .manias .editor,
+.shinobiNoSho .sub-body .tab .filosofia .editor {
+  min-height: 170px !important;
+}
+.shinobiNoSho .sub-body .tab .historia .editor,
+.shinobiNoSho .sub-body .tab .relacoes .editor {
+  height: 300px !important;
+}
+.shinobiNoSho .sub-body .relacoes .item {
+  display: flex;
+}
+.shinobiNoSho .sub-body .relacoes .resource-content {
+  gap: 4px;
+  margin-bottom: 4px;
+}
+.shinobiNoSho .container {
+  border: 1px solid #949494;
+  border-radius: 4px;
+  padding: 5px;
+}
+.shinobiNoSho .anotacoes .editor {
+  min-height: 380px;
+}
+.shinobiNoSho #habilidadesCombate, .shinobiNoSho #estatisticasCombate {
+  margin-top: 6px;
+}
+.shinobiNoSho #habilidadesCombate .resource-content i, .shinobiNoSho #estatisticasCombate .resource-content i {
+  padding: 0 5px;
+}
+.shinobiNoSho #habilidadesCombate > div, .shinobiNoSho #estatisticasCombate > div {
+  margin-bottom: 10px;
+}
+.shinobiNoSho #habilidadesCombate > div:last-of-type, .shinobiNoSho #estatisticasCombate > div:last-of-type {
+  margin-bottom: 5px;
+}
+.shinobiNoSho #habilidadesCombate div .item-prop, .shinobiNoSho #estatisticasCombate div .item-prop {
+  padding-left: 20px;
+}
+.shinobiNoSho #estatisticasCombate {
+  margin-top: 10px;
+}
+.shinobiNoSho #estatisticasCombate input, .shinobiNoSho #estatisticasCombate select {
+  max-width: 100px;
+}
+.shinobiNoSho #periciasGerais {
+  position: relative;
+  margin-bottom: 6px;
+}
+.shinobiNoSho #periciasGerais .periciaLivre {
+  padding-right: 0;
+}
+.shinobiNoSho #periciasGerais .resource-content i {
+  padding: 0 5px;
+}
+.shinobiNoSho #periciasGerais .resource-label {
+  font-size: 12px;
+}
+.shinobiNoSho #periciasGerais input[type=text] {
+  width: 30px !important;
+}
+.shinobiNoSho #periciasGerais .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-column-gap: 6px;
+  grid-row-gap: 3px;
+  grid-auto-flow: column;
+}
+.shinobiNoSho .rollPericiaLivre {
+  position: absolute;
+  left: 63%;
+  right: 0px;
+  width: 24px;
+}
+.shinobiNoSho #periciasSociais .resource-content {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 6px;
+  grid-row-gap: 6px;
+  grid-auto-flow: column;
+  padding: 0 8px;
+}
+.shinobiNoSho #periciasSociais .resource-label {
+  font-size: 12px;
+}
+.shinobiNoSho #periciasSociais input[type=text] {
+  width: 30px !important;
+}
+.shinobiNoSho #atributosSociais {
+  flex: 0.8;
+  margin-bottom: 6px;
+}
+.shinobiNoSho #atributosSociais .resource input {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+.shinobiNoSho #atributosSociais .resource-label {
+  font-size: 12px;
+}
+.shinobiNoSho #atributosSociais .main-content {
+  height: 70%;
+  justify-content: space-around;
+  align-items: center;
+}
+.shinobiNoSho .skill-label {
+  text-align: left;
+  padding-left: 5px;
+}
+.shinobiNoSho .prestidigitacao {
+  font-size: 12.5px;
+}
+.shinobiNoSho .item-quantity, .shinobiNoSho .item-uses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shinobiNoSho .item-quantity i, .shinobiNoSho .item-uses i {
+  padding: 0 6px;
+}
+.shinobiNoSho .item-quantity input, .shinobiNoSho .item-uses input {
+  background: none;
+  border: none;
+  text-align: center;
+  width: 30px !important;
+}
+.shinobiNoSho .NPC header {
+  margin: 0;
+}
+.shinobiNoSho .NPC .profile {
+  flex: none;
+  padding: 0;
+}
+.shinobiNoSho .NPC .profile img {
+  border-radius: 4px;
+}
+.shinobiNoSho .NPC .atributos-npc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.shinobiNoSho .NPC .atributos-npc .charname {
+  margin: 0;
+}
+.shinobiNoSho .NPC .atributos-npc .charname input {
+  height: 52px;
+  border-radius: 4px;
+}
+.shinobiNoSho .NPC .atributos-npc .atributos-area {
+  display: flex;
+  justify-content: space-between;
+}
+.shinobiNoSho .NPC .atributos-npc .atributos-area .resource {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shinobiNoSho .NPC .atributos-npc .atributos-area .resource input {
+  width: 34px;
+  height: 34px;
+  text-align: center;
+}
+.shinobiNoSho .NPC .info-area {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 12px;
+  grid-row-gap: 10px;
+  grid-auto-flow: column;
+  margin-top: 6px;
+}
+.shinobiNoSho .NPC .resource-npc {
+  display: flex;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(122, 121, 113, 0.3137254902);
+  height: 23px;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.shinobiNoSho .NPC .resource-npc label {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.shinobiNoSho .NPC .resource-npc input {
+  border: 0;
+  background: none;
+  width: 30px;
+  height: 24px;
+  text-align: end;
+}
+.shinobiNoSho .NPC #pericias {
+  display: flex;
+}
+.shinobiNoSho .NPC #pericias .section-title {
+  font-size: 14px;
+  font-weight: bold;
+}
+.shinobiNoSho .NPC #pericias .gerais .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-column-gap: 12px;
+  grid-row-gap: 6px;
+  grid-auto-flow: column;
+  margin-top: 6px;
+}
+.shinobiNoSho .NPC #pericias .sociais {
+  margin-left: 12px;
+}
+.shinobiNoSho .NPC #pericias .sociais .resource-content {
+  display: flex;
+  flex-direction: column;
+}
+.shinobiNoSho .NPC #pericias .sociais .resource-npc {
+  margin-bottom: 6px;
+}
+.shinobiNoSho .NPC #pericias label {
+  text-transform: capitalize;
+}
+.shinobiNoSho .NPC #pericias .rollPericiaLivre {
+  position: absolute;
+  left: 52.5%;
+  right: 0px;
+  width: 24px;
+}
+.shinobiNoSho .NPC #pericias .periciaLivre {
+  text-align: start;
+  font-size: 12px;
+}
+.shinobiNoSho .NPC .item-quantity input {
+  width: 15px !important;
+  height: 20px;
+}
+.shinobiNoSho .NPC .item-small {
+  padding: 0;
+}
+.shinobiNoSho .NPC .tamanho-npc {
+  background: none;
+  border: 0;
+  text-align: end;
+  padding: 0;
+  flex: 0 0 90px;
+  height: 20px;
+}
+.shinobiNoSho .NPC .descricao .editor, .shinobiNoSho .NPC .descricao {
+  height: 100%;
+}
+.shinobiNoSho .NPC .tox-editor-container button {
+  width: 42px !important;
+}
+.shinobiNoSho .resource-label {
+  font-weight: bold;
+}
+.shinobiNoSho .p-r-10 {
+  padding-right: 10px;
+}
+.shinobiNoSho .bold {
+  font-weight: bold;
+}
+.shinobiNoSho .shinobiNoSho.sheet.item {
+  min-height: 400px;
+  max-height: 95%;
+  min-width: 520px;
+}
+.shinobiNoSho .item-effects .item-name {
+  flex: 1 1 200px !important;
+}
+.shinobiNoSho .item-effects a.effect-control {
+  margin: 0 !important;
+  width: 10px;
+}
+.shinobiNoSho .items-header {
+  height: 28px;
+  margin: 2px 0;
+  padding: 0;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  border: 2px groove #eeede0;
+  font-weight: bold;
+}
+.shinobiNoSho .items-header > * {
+  font-size: 14px;
+  text-align: center;
+}
+.shinobiNoSho .items-header .item-name {
+  font-weight: bold;
+  padding-left: 5px;
+  text-align: left;
+  display: flex;
+}
+.shinobiNoSho .items-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  color: #444;
+}
+.shinobiNoSho .items-list .item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.shinobiNoSho .items-list .item-name {
+  flex: 2 1 120px;
+  margin: 0;
+  overflow: hidden;
+  font-size: 13px;
+  text-align: left;
+  align-items: center;
+  display: flex;
+}
+.shinobiNoSho .items-list .item-name h3, .shinobiNoSho .items-list .item-name h4 {
+  margin: 0;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+.shinobiNoSho .items-list .item-controls {
+  display: flex;
+  flex: 0 0 50px;
+  justify-content: flex-end;
+}
+.shinobiNoSho .items-list .item-controls a {
+  font-size: 12px;
+  text-align: center;
+  margin: 0 6px;
+}
+.shinobiNoSho .items-list .item {
+  align-items: center;
+  padding: 0 2px;
+  border-bottom: 1px solid #c9c7b8;
+}
+.shinobiNoSho .items-list .item:last-child {
+  border-bottom: none;
+}
+.shinobiNoSho .items-list .item .item-name {
+  color: #191813;
+}
+.shinobiNoSho .items-list .item .item-name .item-image {
+  flex: 0 0 30px;
+  height: 30px;
+  background-size: 30px;
+  border: none;
+  margin-right: 5px;
+  margin-top: 2px;
+}
+.shinobiNoSho .items-list .item-prop {
+  text-align: center;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  font-size: 12px;
+}
+.shinobiNoSho .items-list .items-header {
+  height: 28px;
+  margin: 2px 0;
+  padding: 0;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  border: 2px groove #eeede0;
+  font-weight: bold;
+}
+.shinobiNoSho .items-list .items-header > * {
+  font-size: 12px;
+  text-align: center;
+}
+.shinobiNoSho .items-list .items-header .item-name {
+  padding-left: 5px;
+  text-align: left;
+}
+.shinobiNoSho .item-formula {
+  flex: 0 0 200px;
+  padding: 0 8px;
+}
+.shinobiNoSho .item-mini {
+  flex: 0 0 40px;
+  padding: 0 8px;
+}
+.shinobiNoSho .item-small {
+  flex: 1 0 70px;
+  padding: 0 8px;
+}
+.shinobiNoSho .item-medium {
+  flex: 1 0 100px;
+  padding: 0 8px;
+}
+.shinobiNoSho .item-large {
+  flex: 2 0 130px;
+  padding: 0 8px;
+}
+.shinobiNoSho .item-extralarge {
+  flex: 2 0 160px;
+  padding: 0 8px;
+}
+.shinobiNoSho .effects-list .item-name {
+  flex: 2 1 200px;
+}
+.shinobiNoSho .effects-list .effect-source,
+.shinobiNoSho .effects-list .effect-duration,
+.shinobiNoSho .effects-list .effect-controls {
+  flex: 1 1 70px;
+}
+.shinobiNoSho .effects-list h3 {
+  border-bottom: 0 !important;
+}
+.shinobiNoSho #aptidao .header-fields-2, .shinobiNoSho #armas .header-fields-2, .shinobiNoSho #poderes .header-fields-2,
+.shinobiNoSho #gerais .header-fields-2, .shinobiNoSho #armaduras .header-fields-2, .shinobiNoSho #tecnicas .header-fields-2 {
+  display: flex;
+  gap: 10px;
+}
+.shinobiNoSho #aptidao .editor, .shinobiNoSho #aptidao .editor-content, .shinobiNoSho #armas .editor, .shinobiNoSho #armas .editor-content, .shinobiNoSho #poderes .editor, .shinobiNoSho #poderes .editor-content,
+.shinobiNoSho #gerais .editor,
+.shinobiNoSho #gerais .editor-content, .shinobiNoSho #armaduras .editor, .shinobiNoSho #armaduras .editor-content, .shinobiNoSho #tecnicas .editor, .shinobiNoSho #tecnicas .editor-content {
+  min-height: 130px;
+}
+.shinobiNoSho #aptidao .tab, .shinobiNoSho #armas .tab, .shinobiNoSho #poderes .tab,
+.shinobiNoSho #gerais .tab, .shinobiNoSho #armaduras .tab, .shinobiNoSho #tecnicas .tab {
+  padding: 0 14px;
+}
+.shinobiNoSho #aptidao .tab .content > div, .shinobiNoSho #armas .tab .content > div, .shinobiNoSho #poderes .tab .content > div,
+.shinobiNoSho #gerais .tab .content > div, .shinobiNoSho #armaduras .tab .content > div, .shinobiNoSho #tecnicas .tab .content > div {
+  margin: 5px 0;
+}
+.shinobiNoSho #aptidao .tab .resource, .shinobiNoSho #armas .tab .resource, .shinobiNoSho #poderes .tab .resource,
+.shinobiNoSho #gerais .tab .resource, .shinobiNoSho #armaduras .tab .resource, .shinobiNoSho #tecnicas .tab .resource {
+  position: relative;
+  align-items: center;
+  text-align: right;
+  width: 100%;
+}
+.shinobiNoSho #aptidao label, .shinobiNoSho #armas label, .shinobiNoSho #poderes label,
+.shinobiNoSho #gerais label, .shinobiNoSho #armaduras label, .shinobiNoSho #tecnicas label {
+  width: 100px;
+  min-width: 100px;
+}
+.shinobiNoSho #aptidao input, .shinobiNoSho #aptidao select, .shinobiNoSho #armas input, .shinobiNoSho #armas select, .shinobiNoSho #poderes input, .shinobiNoSho #poderes select,
+.shinobiNoSho #gerais input,
+.shinobiNoSho #gerais select, .shinobiNoSho #armaduras input, .shinobiNoSho #armaduras select, .shinobiNoSho #tecnicas input, .shinobiNoSho #tecnicas select {
+  width: 100%;
+  text-align: start;
+}
+.shinobiNoSho #aptidao i, .shinobiNoSho #armas i, .shinobiNoSho #poderes i,
+.shinobiNoSho #gerais i, .shinobiNoSho #armaduras i, .shinobiNoSho #tecnicas i {
+  padding: 0 10px;
+}
+.shinobiNoSho #aptidao .resource-content, .shinobiNoSho #armas .resource-content, .shinobiNoSho #poderes .resource-content,
+.shinobiNoSho #gerais .resource-content, .shinobiNoSho #armaduras .resource-content, .shinobiNoSho #tecnicas .resource-content {
+  flex-grow: 1;
+}
+.shinobiNoSho #aptidao .container, .shinobiNoSho #armas .container, .shinobiNoSho #poderes .container,
+.shinobiNoSho #gerais .container, .shinobiNoSho #armaduras .container, .shinobiNoSho #tecnicas .container {
+  min-height: 150px;
+}
+.shinobiNoSho #aptidao .sheet-body,
+.shinobiNoSho #aptidao .sheet-body .tab,
+.shinobiNoSho #aptidao .sheet-body .tab .editor, .shinobiNoSho #armas .sheet-body,
+.shinobiNoSho #armas .sheet-body .tab,
+.shinobiNoSho #armas .sheet-body .tab .editor, .shinobiNoSho #poderes .sheet-body,
+.shinobiNoSho #poderes .sheet-body .tab,
+.shinobiNoSho #poderes .sheet-body .tab .editor,
+.shinobiNoSho #gerais .sheet-body,
+.shinobiNoSho #gerais .sheet-body .tab,
+.shinobiNoSho #gerais .sheet-body .tab .editor, .shinobiNoSho #armaduras .sheet-body,
+.shinobiNoSho #armaduras .sheet-body .tab,
+.shinobiNoSho #armaduras .sheet-body .tab .editor, .shinobiNoSho #tecnicas .sheet-body,
+.shinobiNoSho #tecnicas .sheet-body .tab,
+.shinobiNoSho #tecnicas .sheet-body .tab .editor {
+  height: 100%;
+}
+.shinobiNoSho #aptidao .tab, .shinobiNoSho #armas .tab, .shinobiNoSho #poderes .tab,
+.shinobiNoSho #gerais .tab, .shinobiNoSho #armaduras .tab, .shinobiNoSho #tecnicas .tab {
+  overflow-y: hidden;
+  height: 100%;
+  align-content: flex-start;
+  padding-right: 2px;
+}
+.shinobiNoSho #aptidao .sheet-body, .shinobiNoSho #armas .sheet-body, .shinobiNoSho #poderes .sheet-body,
+.shinobiNoSho #gerais .sheet-body, .shinobiNoSho #armaduras .sheet-body, .shinobiNoSho #tecnicas .sheet-body {
+  overflow: hidden;
+}
+.shinobiNoSho #aptidao .window-content, .shinobiNoSho #armas .window-content, .shinobiNoSho #poderes .window-content,
+.shinobiNoSho #gerais .window-content, .shinobiNoSho #armaduras .window-content, .shinobiNoSho #tecnicas .window-content {
+  overflow-y: hidden;
+}
+.shinobiNoSho #aptidao .content, .shinobiNoSho #armas .content, .shinobiNoSho #poderes .content,
+.shinobiNoSho #gerais .content, .shinobiNoSho #armaduras .content, .shinobiNoSho #tecnicas .content {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.shinobiNoSho .traits-grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 6px;
+  grid-row-gap: 3px;
+  grid-auto-flow: row;
+  padding-top: 5px;
+}
+.shinobiNoSho .effects .item .effect-source,
+.shinobiNoSho .effects .item .effect-duration,
+.shinobiNoSho .effects .item .effect-controls {
+  text-align: center;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  font-size: 12px;
+}
+.shinobiNoSho .effects .item .effect-controls {
+  border: none;
+}
+.shinobiNoSho.item-card h2 {
+  border: 0;
+  margin: 0;
+}
+.shinobiNoSho .header {
+  display: flex;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  align-items: center;
+  height: 100%;
+}
+.shinobiNoSho .header .item-name {
+  padding-left: 5px;
+  width: 100%;
+}
+.shinobiNoSho .header span {
+  width: 45px;
+  height: 100%;
+  text-align: center;
+}
+.shinobiNoSho .header img {
+  border-radius: 4px;
+  border: 1px solid #949494;
+}
+.shinobiNoSho main .info span {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8352941176);
+}
+.shinobiNoSho main table {
+  border-top: 0;
+  border-bottom: 0;
+}
+.shinobiNoSho .descricao-chat-card,
+.shinobiNoSho .caracteristicas-chat-card {
+  transition: 0.3s;
+}
+.shinobiNoSho .descricao-chat-card summary,
+.shinobiNoSho .caracteristicas-chat-card summary {
+  padding-left: 5px;
+}
+.shinobiNoSho .descricao-chat-card:hover,
+.shinobiNoSho .caracteristicas-chat-card:hover {
+  background-color: #c0c0c0;
+}
+.shinobiNoSho .info-span {
+  padding: 0px 4px;
+  border: 1px solid #818181;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.shinobiNoSho .card-buttons {
+  margin-top: 6px;
+}
+
+/*# sourceMappingURL=shinobiNoSho.css.map */

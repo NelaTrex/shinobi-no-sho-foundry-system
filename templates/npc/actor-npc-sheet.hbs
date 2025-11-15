@@ -1,0 +1,212 @@
+<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+	<header class="sheet-header">
+		<div class="profile">
+			<img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="124" width="124"/>
+		</div>
+		<div class="atributos-npc">
+			<h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Nome"/></h1>
+			<div class="atributos-area">
+				<div class="resource">
+					<div class="resource-content">
+						<input type="text" name="system.abilities.for.value" 
+						value="{{system.abilities.for.value}}" data-dtype="Number"/>
+					</div>
+					<label for="system.abilities.for.value" class="resource-label rollable" data-roll-type="ability" data-key="for">
+						{{localize "shinobiNoSho.ability.for.abbr"}}
+					</label>
+				</div>
+				<div class="resource">
+					<div class="resource-content">
+						<input type="text" name="system.abilities.des.value" 
+						value="{{system.abilities.des.value}}" data-dtype="Number"/>
+					</div>
+					<label for="system.abilities.des.value" class="resource-label rollable" data-roll-type="ability" data-key="des">
+						{{localize "shinobiNoSho.ability.des.abbr"}}
+					</label>
+				</div>
+				<div class="resource">
+					<div class="resource-content">
+						<input type="text" name="system.abilities.agi.value" 
+						value="{{system.abilities.agi.value}}" data-dtype="Number"/>
+					</div>
+					<label for="system.abilities.agi.value" class="resource-label rollable" data-roll-type="ability" data-key="agi">
+						{{localize "shinobiNoSho.ability.agi.abbr"}}
+					</label>
+				</div>
+				<div class="resource">
+					<div class="resource-content">
+						<input type="text" name="system.abilities.per.value" 
+						value="{{system.abilities.per.value}}" data-dtype="Number"/>
+					</div>
+					<label for="system.abilities.per.value" class="resource-label rollable" data-roll-type="ability" data-key="per">
+						{{localize "shinobiNoSho.ability.per.abbr"}}
+					</label>
+				</div>
+				<div class="resource">
+					<div class="resource-content">
+						<input type="text" name="system.abilities.int.value" 
+						value="{{system.abilities.int.value}}" data-dtype="Number"/>
+					</div>
+					<label for="system.abilities.int.value" class="resource-label rollable" data-roll-type="ability" data-key="int">
+						{{localize "shinobiNoSho.ability.int.abbr"}}
+					</label>
+				</div>
+				<div class="resource">
+					<div class="resource-content">
+						<input type="text" name="system.abilities.vig.value" 
+						value="{{system.abilities.vig.value}}" data-dtype="Number"/>
+					</div>
+					<label for="system.abilities.vig.value" class="resource-label rollable" data-roll-type="ability" data-key="vig">
+						{{localize "shinobiNoSho.ability.vig.abbr"}}
+					</label>
+				</div>
+				<div class="resource">
+					<div class="resource-content">
+						<input type="text" name="system.abilities.esp.value" 
+						value="{{system.abilities.esp.value}}" data-dtype="Number"/>
+					</div>
+					<label for="system.abilities.esp.value" class="resource-label rollable" data-roll-type="ability" data-key="esp">
+						{{localize "shinobiNoSho.ability.esp.abbr"}}
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="info-area">
+			<div class="resource-npc">
+				<label for="system.abilities.combate.CC.value" class="rollable" data-tooltip="Combate Corporal"
+				 data-roll-type="combatAbilities" data-key="CC"><i class="fas fa-dice"></i> CC</label>
+				<input type="text" name="system.abilities.combate.CC.value" value="{{system.abilities.combate.CC.value}}"
+				 data-dtype="Number" placeholder="0">
+			</div>
+			<div class="resource-npc">
+				<label for="system.abilities.combate.CC.value" class="rollable" data-tooltip="Combate à Distância"
+				 data-roll-type="combatAbilities" data-key="CD"><i class="fas fa-dice"></i> CD</label>
+				<input type="text" name="system.abilities.combate.CD.value" value="{{system.abilities.combate.CD.value}}" 
+				data-dtype="Number" placeholder="0">
+			</div>
+			<div class="resource-npc">
+				<label for="system.abilities.combate.E.value" class="rollable" data-tooltip="Esquiva + Reação"
+				 data-roll-type="combatAbilities" data-key="E"><i class="fas fa-dice"></i> ESQ+9 ({{system.abilities.combate.E.tbonus}})</label>
+				<input type="text" name="system.abilities.combate.E.value" value="{{system.abilities.combate.E.value}}" 
+				data-dtype="Number" placeholder="0">
+			</div>
+			<div class="resource-npc">
+				<label for="system.abilities.combate.LM.value" class="rollable" data-tooltip="Ler Movimentos"
+				 data-roll-type="combatAbilities" data-key="LM"><i class="fas fa-dice"></i> LM</label>
+				<input type="text" name="system.abilities.combate.LM.value" value="{{system.abilities.combate.LM.value}}" 
+				data-dtype="Number" placeholder="0">
+			</div>
+			<div class="resource-npc">
+				<label data-tooltip="Iniciativa">INI</label>
+				<input type="text" name="system.attributes.init.value" placeholder="0"
+				 value="{{system.attributes.init.value}}" data-dtype="Number">
+			</div>
+			<div class="resource-npc">
+				<label data-tooltip="Deslocamento">DESLOC</label>
+				<div><input type="text" name="system.attributes.movement.andar" placeholder="0"
+				 value="{{system.attributes.movement.andar}}" data-dtype="Number"><span style="font-weight: 400;">m</span></div>
+			</div>
+			<div class="resource-npc">
+				<label data-tooltip="Tamanho">TAM</label>
+				<select name="system.details.tamanho" class="item-medium tamanho-npc">
+					{{selectOptions tamanhos selected=system.details.tamanho localize=true blank="—"}}
+				</select>
+			</div>
+			<div class="resource-npc">
+				<label data-tooltip="Nível de Campanha">NC</label>
+				<input type="text" name="system.details.nivelCampanha" placeholder="1"
+				 value="{{system.details.nivelCampanha}}" data-dtype="Number">
+			</div>
+			<div class="resource-npc">
+				<label data-tooltip="Vitalidade">VIT</label>
+				<div>
+					<input type="text" name="system.attributes.vitalidade.value" placeholder="0" 
+					style="margin-right: 10px;" value="{{system.attributes.vitalidade.value}}" data-dtype="Number"> /
+					<input type="text" name="system.attributes.vitalidade.max" placeholder="0" 
+					value="{{system.attributes.vitalidade.max}}" data-dtype="Number">
+				</div>
+			</div>
+			<div class="resource-npc">
+				<label data-tooltip="Chakra">CHA</label>
+				<div>
+					<input type="text" name="system.attributes.chakra.value" placeholder="0" 
+					style="margin-right: 10px;" value="{{system.attributes.chakra.value}}" data-dtype="Number"> /
+					<input type="text" name="system.attributes.chakra.max" placeholder="0" 
+					value="{{system.attributes.chakra.max}}" data-dtype="Number">
+				</div>
+			</div>
+			<div class="resource-npc">
+				<label data-tooltip="Absorção">ABS</label>
+				<div>
+					<input type="text" name="system.attributes.absorcao.value" placeholder="0"
+					value="{{system.attributes.absorcao.value}}" data-dtype="Number"> /
+					<input type="text" name="system.attributes.absorcao.max" placeholder="0"
+					value="{{system.attributes.absorcao.max}}" data-dtype="Number">
+				</div>
+			</div>
+			<div class="resource-npc">
+				<label data-tooltip="Dureza">DUR</label>
+				<input type="text" name="system.attributes.dureza.value" value="{{system.attributes.dureza.value}}" 
+				data-dtype="Number" placeholder="0">
+			</div>
+		</div>
+	</header>
+
+	{{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="pericias">Perícias</a>
+    <a class="item" data-tab="aptidoesPoderes">Aptidões/Poderes</a>
+		<a class="item" data-tab="tecnicas">Técnicas</a>
+		<a class="item" data-tab="inventario">Inventário</a>
+		<a class="item" data-tab="descricao">Descrição</a>
+		<a class="item" data-tab="efeitos">Efeitos</a>
+  </nav>
+
+	{{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Owned Skills Tab --}}
+    <div class="tab pericias" data-group="primary" data-tab="pericias">
+			<div class="content">
+				{{> "systems/shinobinosho/templates/npc/parts/actor-pericias.hbs"}}
+			</div>
+    </div>
+
+    {{!-- Owned Aptitudes and Powers Tab --}}
+    <div class="tab aptidoesPoderes" data-group="primary" data-tab="aptidoesPoderes">
+			<div class="content">
+      {{> "systems/shinobinosho/templates/npc/parts/actor-aptidoesPoderes.hbs"}}
+			</div>
+    </div>
+
+		{{!-- Owned Techniques Tab --}}
+    <div class="tab tecnicas" data-group="primary" data-tab="tecnicas">
+			<div class="content">
+       	{{> "systems/shinobinosho/templates/npc/parts/actor-tecnicas.hbs"}}
+			 </div>
+    </div>
+
+		{{!-- Owned Inventory Tab --}}
+    <div class="tab inventario" data-group="primary" data-tab="inventario">
+			<div class="content">
+					{{> "systems/shinobinosho/templates/npc/parts/actor-inventario.hbs"}}
+				</div>
+			</div>
+    </div>
+
+		{{!-- Owned Description Tab --}}
+    <div class="tab descricao" data-group="primary" data-tab="descricao">
+			<div class="content">
+				<div class="descricao container">
+					{{editor system.details.descricao target="system.details.descricao" 
+					rollData=rollData button=true owner=owner editable=editable}}
+				</div>
+			</div>
+    </div>
+
+    {{!-- Active Effects Tab --}}
+    <div class="tab efeitos flexcol" data-group="primary" data-tab="efeitos">
+      {{> "systems/shinobinosho/templates/npc/parts/actor-efeitos.hbs"}}
+		</div>
+	</section>
+</form>

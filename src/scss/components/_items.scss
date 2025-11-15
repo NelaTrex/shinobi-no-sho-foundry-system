@@ -1,0 +1,246 @@
+.shinobiNoSho.sheet.item {
+	min-height: 400px;
+	max-height: 95%;
+	min-width: 520px;
+}
+
+.item-effects {
+	.item-name {
+		flex: 1 1 200px !important;
+	}
+
+	a.effect-control {
+		margin: 0 !important;
+		width: 10px;
+	}
+}
+
+// Section Header
+.items-header {
+  height: 28px;
+  margin: 2px 0;
+  padding: 0;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  border: $border-groove;
+  font-weight: bold;
+  > * {
+    font-size: 14px;
+    text-align: center;
+  }
+  .item-name {
+    font-weight: bold;
+    padding-left: 5px;
+    text-align: left;
+    display: flex;
+    // font-size: 16px;
+  }
+}
+
+// -----------------------------------------
+// Items Lists
+// -----------------------------------------
+
+.items-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  color: $c-tan;
+
+  // Child lists
+  .item-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  // Item Name
+  .item-name {
+    flex: 2 1 120px;
+    margin: 0;
+    overflow: hidden;
+    font-size: 13px;
+    text-align: left;
+    align-items: center;
+    display: flex;
+    h3, h4 {
+      margin: 0;
+      white-space: nowrap;
+      overflow-x: hidden;
+    }
+  }
+
+  // Control Buttons
+  .item-controls {
+    display: flex;
+    flex: 0 0 50px;
+    justify-content: flex-end;
+    a {
+      font-size: 12px;
+      text-align: center;
+      margin: 0 6px;
+    }
+  }
+
+  // Individual Item
+  .item {
+    align-items: center;
+    padding: 0 2px; // to align with the header border
+    border-bottom: 1px solid $c-faint;
+    &:last-child { border-bottom: none; }
+    .item-name {
+      color: $c-dark;
+      .item-image {
+        flex: 0 0 30px;
+        height: 30px;
+        background-size: 30px;
+        border: none;
+        margin-right: 5px;
+				margin-top: 2px;
+      }
+    }
+  }
+
+  .item-prop {
+    text-align: center;
+    border-left: 1px solid #c9c7b8;
+    border-right: 1px solid #c9c7b8;
+    font-size: 12px;
+  }
+
+  // Section Header
+  .items-header {
+    height: 28px;
+    margin: 2px 0;
+    padding: 0;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.05);
+    border: $border-groove;
+    font-weight: bold;
+    > * {
+      font-size: 12px;
+      text-align: center;
+    }
+    .item-name {
+      padding-left: 5px;
+      text-align: left;
+      // font-size: 16px;
+    }
+  }
+}
+
+// Example style for shinobiNoSho 
+// (can be removed if not needed).
+.item-formula {
+  
+  flex: 0 0 200px;
+  padding: 0 8px;
+}
+
+.item-mini {
+  flex: 0 0 40px;
+  padding: 0 8px;
+}
+
+.item-small {
+  flex: 1 0 70px;
+  padding: 0 8px;
+}
+
+.item-medium {
+  flex: 1 0 100px;
+  padding: 0 8px;
+}
+
+.item-large {
+  flex: 2 0 130px;
+  padding: 0 8px;
+}
+
+.item-extralarge {
+  flex: 2 0 160px;
+  padding: 0 8px;
+}
+
+.effects-list {
+	.item-name {
+		flex: 2 1 200px;
+	}
+
+	.effect-source,
+	.effect-duration,
+	.effect-controls {
+		flex: 1 1 70px;
+	}
+
+	h3 {
+		border-bottom: 0 !important;
+	}
+}
+
+#aptidao, #armas, #poderes,
+#gerais, #armaduras, #tecnicas {
+	.header-fields-2 {
+		display: flex;
+		gap: 10px;
+	}
+
+	.editor, .editor-content {
+		min-height: 130px;
+	}
+
+	.tab { 
+		padding: 0 14px;
+		.content { & > div { margin: 5px 0; } }
+		.resource {
+			position: relative;
+			align-items: center;
+			text-align: right;
+			width: 100%;
+		}
+	}
+	label { width: 100px; min-width: 100px; }
+	input, select { width: 100%; text-align: start; }
+	i { padding: 0 10px; }
+	.resource-content { flex-grow: 1; }
+	.container { min-height: 150px; }
+	
+	.sheet-body,
+	.sheet-body .tab,
+	.sheet-body .tab .editor {
+		height: 100%;
+	}
+
+	.tab {
+		overflow-y: hidden;
+		height: 100%;
+		align-content: flex-start;
+		padding-right: 2px;
+	}
+
+	.sheet-body {
+		overflow: hidden;
+	}
+
+	.window-content {
+		overflow-y: hidden;
+	}
+
+	.content {
+		height: 100%;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+}
+
+.traits-grid {
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-column-gap: 6px;
+	grid-row-gap: 3px;
+	grid-auto-flow: row;
+	
+	padding-top: 5px;
+}

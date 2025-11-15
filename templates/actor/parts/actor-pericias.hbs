@@ -1,0 +1,89 @@
+<div class="tab gerais" data-group="pericias" data-tab="gerais">
+	<section id="periciasGerais" class="container">
+		<h3 class="section-title">Perícias Gerais</h3>
+		<div class="grid">
+			<div class="pericia-header flexrow flex-group-center" style="border-bottom: 1px solid #a0a0a0; padding: 0 5px;">
+            <div class='item-large item-prop bold'>Perícia</div>
+            <div class='item-mini item-prop bold'>Total</div>
+            <div class='item-mini item-prop bold' title="1/2 Atributo arredondado para cima">1/2 Atrib.</div> 
+            <div class='item-mini item-prop bold' title="Pontos Gastos">Pontos</div>
+            <div class='item-small item-prop bold'>Bônus</div>
+        </div>
+			{{#each system.skills.geral as |skill id|}}
+			<div class="resource-content flex flex-2 flex-group-center align-center">
+                                        <span class="calculated-value item-mini" title="Total Calculado (1/2 Atrib. + Pontos + Bônus)">{{skill.value}}</span>
+
+                    <i class="fas fa-equals"></i>
+                    
+                                        <span class="calculated-value item-mini" title="1/2 {{skill.ability}} arredondado para cima">{{skill.meio_atributo}}</span>
+                    
+                    <i class="fas fa-plus"></i>
+
+                                        <input type="number" name="system.skills.geral.{{id}}.pontos_gastos" 
+                    value="{{skill.pontos_gastos}}" class="item-mini" data-dtype="Number" title="Pontos Investidos">
+                    
+                    <i class="fas fa-plus"></i>
+
+                                        <input type="number" name="system.skills.geral.{{id}}.bonus" 
+                    value="{{skill.bonus}}" class="item-small" data-dtype="Number" title="Bônus Fixo">
+
+                                        {{#if this.caract.isVoo}}
+                        <select name="system.skills.geral.{{id}}.ability">
+                            {{selectOptions ../vooCustom selected=skill.ability localize=true}}
+                        </select>
+                    {{else}}
+                        <select name="system.skills.geral.{{id}}.ability">
+                            {{selectOptions ../atributosAbv selected=skill.ability localize=true}}
+                        </select>
+                    {{/if}}
+                </div>
+			{{/each}}
+		</div>
+	</section>
+	<p style="font-size: 14px;"><i>+: perícias que necessitam treinamento. *: perícias que são afetadas por armadura.</i></p>
+</div>
+
+<div class="tab sociais" data-group="pericias" data-tab="sociais">
+	<section id="atributosSociais" class="container">
+		<h3 class="section-title">Atributos Sociais</h3>
+		<div class="main-content flex flex-group-center align-center">
+			<label for="system.abilities.man.value" class="resource-label">Manipulação</label>
+			<div class="resource-content">
+				<input type="text" name="system.abilities.man.value" 
+				value="{{system.abilities.man.value}}" data-dtype="Number"/>
+			</div>
+			<label for="system.abilities.car.value" class="resource-label">Carisma</label>
+			<div class="resource-content">
+				<input type="text" name="system.abilities.car.value" 
+				value="{{system.abilities.car.value}}" data-dtype="Number"/>
+			</div>
+		</div>
+	</section>
+	<section id="periciasSociais" class="container flex-2">
+		<h3 class="section-title">Perícias Sociais</h3>
+		<div class="resource-content flex flex-2 flex-group-center align-center">
+                                        <span class="calculated-value item-mini" title="Total Calculado">{{skill.value}}</span>
+
+                    <i class="fas fa-equals"></i>
+                    
+                                        <span class="calculated-value item-mini" title="1/2 Atributo arredondado para cima">{{skill.meio_atributo}}</span>
+                    
+                    <i class="fas fa-plus"></i>
+
+                                        <input type="number" name="system.skills.social.{{id}}.pontos_gastos" 
+                    value="{{skill.pontos_gastos}}" class="item-mini" data-dtype="Number" title="Pontos Investidos">
+                    
+                    <i class="fas fa-plus"></i>
+
+                                        <input type="number" name="system.skills.social.{{id}}.bonus" 
+                    value="{{skill.bonus}}" class="item-small" data-dtype="Number" title="Bônus Fixo">
+
+                                        <select name="system.skills.social.{{id}}.ability">
+                        {{selectOptions ../atributos selected=skill.ability localize=true}}
+                    </select>
+                    <select name="system.skills.social.{{id}}.custom">
+                        {{selectOptions ../socialCustom selected=skill.custom localize=true blank="—"}}
+                    </select>
+                </div>
+	</section>
+</div>

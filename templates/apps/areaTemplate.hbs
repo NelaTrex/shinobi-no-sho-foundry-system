@@ -1,0 +1,35 @@
+<form id="areaTemplate">
+	<fieldset class="predefinedAreas">
+		<legend>Predefinições de Área</legend>
+		{{#each system.areaTemplate as |area i|}}
+			<div class="area flex-group-center">
+				<i class="fa-solid fa-shapes"></i> 
+				<span style="flex: 1.5;">
+					{{#if area.[0]}}
+						{{localize (concat "shinobiNoSho.ITEMS.areas." area.[0]) }}
+					{{else}}
+						Sem Área
+					{{/if}}
+					de {{#if area.[4]}} {{area.[4]}}m {{else}} 0m {{/if}}
+				</span>
+				<input type="radio" id="area1" name="area" value="{{area.[0]}}/{{area.[4]}}"/>
+			</div>
+		{{/each}}
+		<p>A técnica ou equipamento que você selecionou tem as seguintes áreas disponíveis.</p>
+	</fieldset>
+	<fieldset class="actions">
+		<legend>Ajustes de Área</legend>
+		<div class="adjusts">
+			<select class="flex-1" name="areaModifier">
+				{{selectOptions areas localize=true blank="—"}}
+			</select>
+			<div class="numberSelector flex-1 flex-group-center">
+				<button type="button" class="minusOne {{this.id}}"><i class="fa-solid fa-minus"></i></button>
+				<input type="number" class="numberModifier {{this.id}}" name="numberModifier" value="0"/>
+				<button type="button" class="plusOne {{this.id}}"><i class="fa-solid fa-plus"></i></button>
+			</div>
+		</div>
+		<p>Você pode alterar a forma ou tamanho da área selecionada através destes seletores.</p>
+	</fieldset>
+	<button type="submit" class="submit placeAreaTemplate"><i class="fa-solid fa-expand"></i> Posicionar Área</input>
+</form>

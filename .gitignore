@@ -1,0 +1,6 @@
+*.pdf
+*.map
+*.rar
+/project
+/nodes_modules
+*.txt
