@@ -1,5 +1,25 @@
 # CHANGELOG
 
+## [1.14.0](https://github.com/NelaTrex/shinobi-no-sho-foundry-system/compare/v1.13.3...v1.14.0) (2025-11-16)
+
+
+### Features
+
+* Implementa ficha V2 completa (Configuracoes, Databook, Kuchiyose/Kugutsu) ([c9699aa](https://github.com/NelaTrex/shinobi-no-sho-foundry-system/commit/c9699aae317f058e3baf5cfcd3f952fe077594cc))
+
+
+### Bug Fixes
+
+* Correcao final de sintaxe JS, alinha caminhos e carrega todos os modulos ([89e5e00](https://github.com/NelaTrex/shinobi-no-sho-foundry-system/commit/89e5e007251a30f779a7ed587244e45e6020b344))
+* Correcao final de sintaxe JS, alinha caminhos e carrega todos os modulos ([0efe277](https://github.com/NelaTrex/shinobi-no-sho-foundry-system/commit/0efe277a5034eaf8f275bbe2c8a3327ed4c84b0d))
+* Correcao final de sintaxe JS, alinha caminhos e carrega todos os modulos ([680c742](https://github.com/NelaTrex/shinobi-no-sho-foundry-system/commit/680c742e4db88c16b134eeb42be1a41bb5749bec))
+* Correcao final de sintaxe JS, alinha caminhos e carrega todos os modulos ([bec58d9](https://github.com/NelaTrex/shinobi-no-sho-foundry-system/commit/bec58d94d46339ace6e79002a3ba2850c042a400))
+* Correcao final de sintaxe JS, alinha caminhos e carrega todos os modulos ([d470d1e](https://github.com/NelaTrex/shinobi-no-sho-foundry-system/commit/d470d1e322e97dcd4e162b2eab6d8ea050a615dd))
+* Correcao final de sintaxe JS, alinha caminhos e carrega todos os modulos ([4d064e9](https://github.com/NelaTrex/shinobi-no-sho-foundry-system/commit/4d064e99503e2d5f2a350b471bd61d4dc51d3361))
+* Corrige link do manifesto e atualiza versão para 2.0.0 ([f9327f2](https://github.com/NelaTrex/shinobi-no-sho-foundry-system/commit/f9327f2d003bf0784c03b10c5d266cabdfe6cb17))
+* Corrige link do manifesto e atualiza versão para 2.0.0 ([c5d46dc](https://github.com/NelaTrex/shinobi-no-sho-foundry-system/commit/c5d46dcc2fd2c14090222719d7cd834281a26689))
+* Finaliza system.json com sintaxe validada e link do manifesto corrigido. Versão 2.0.0 ([04640e4](https://github.com/NelaTrex/shinobi-no-sho-foundry-system/commit/04640e49f093eeb44de30c4ba74bdce75fcfefa7))
+
 ## [1.13.3](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.13.2...v1.13.3) (2024-12-14)
 
 
