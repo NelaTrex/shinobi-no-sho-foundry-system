@@ -10,9 +10,9 @@
       "flags": {}
     }
   ],
-  "url": "https://github.com/SouOWendel/shinobi-no-sho",
+  "url": "https://github.com/NelaTrex/shinobi-no-sho-foundry-system",
   "readme": "README.md",
-  "bugs": "https://github.com/SouOWendel/shinobi-no-sho/issues",
+  "bugs": "https://github.com/NelaTrex/shinobi-no-sho-foundry-system/issues",
   "changelog": "CHANGELOG.md",
   "version": "1.13.3",
   "compatibility": {
@@ -59,7 +59,7 @@
     {
       "name": "macros",
       "label": "Macros",
-      "system": "shinobinoshoremake",
+      "system": "shinobinosho",
       "path": "packs/macros",
       "type": "Macro",
       "ownership": {
@@ -70,8 +70,8 @@
     }
   ],
   "socket": true,
-  "manifest": "https://raw.githubusercontent.com/souowendel/shinobi-no-sho/main/system.json",
-  "download": "https://github.com/SouOWendel/shinobi-no-sho/releases/download/v1.13.3/shinobinosho-v1.13.3.zip",
+  "manifest": "https://raw.githubusercontent.com/NelaTrex/shinobi-no-sho-foundry-system/refs/heads/main/system.json",
+  "download": "https://github.com/NelaTrex/shinobi-no-sho-foundry-system/releases/download/v1.13.3/shinobinosho-v1.13.3.zip",
   "grid": {
     "units": "m"
   },
