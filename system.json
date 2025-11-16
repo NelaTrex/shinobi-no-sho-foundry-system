@@ -59,7 +59,7 @@
     {
       "name": "macros",
       "label": "Macros",
-      "system": "shinobinoshoremake",
+      "system": "shinobinosho",
       "path": "packs/macros",
       "type": "Macro",
       "ownership": {
