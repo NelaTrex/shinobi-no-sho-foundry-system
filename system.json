@@ -1,20 +1,25 @@
 {
   "id": "shinobinoshoremake",
-  "title": "Shinobi no Sho Remake",
+  "title": "Shinobi no Sho",
   "description": "Este é um sistema de Naruto 'Shinobi no Sho', um sistema e livro de regras com autoria de Diego 'Fesant' Silva, para a plataforma de RPG de Mesa conhecida como FoundryVTT. O desenvolvimento do sistema foi apoiado por Vallen.",
   "authors": [
     {
-      "name": "NelaTrex",
-      "email": "jn.nelatrex@gmail.com",
-      "discord": "nelatrex",
+      "name": "Mark57449 (SouOWendel)",
+      "email": "souowendel@gmail.com",
+      "discord": "souowendel",
+      "flags": {}
+    },
+    {
+      "name": "Vallen (Arthur)",
+      "discord": "vallen_allond",
       "flags": {}
     }
   ],
-  "url": "https://github.com/NelaTrex/shinobi-no-sho-foundry-system",
+  "url": "https://github.com/SouOWendel/shinobi-no-sho",
   "readme": "README.md",
-  "bugs": "https://github.com/NelaTrex/shinobi-no-sho-foundry-system/issues",
+  "bugs": "https://github.com/SouOWendel/shinobi-no-sho/issues",
   "changelog": "CHANGELOG.md",
-  "version": "2.0.0",
+  "version": "1.13.3",
   "compatibility": {
     "minimum": "11",
     "verified": "12"
@@ -70,8 +75,8 @@
     }
   ],
   "socket": true,
-  "manifest": "https://raw.githubusercontent.com/NelaTrex/shinobi-no-sho-foundry-system/main/system.json",
-  "download": "https://github.com/NelaTrex/shinobi-no-sho-foundry-system/releases/download/v2.0.0/shinobinosho-v2.0.0.zip",
+  "manifest": "https://raw.githubusercontent.com/NelaTrex/shinobi-no-sho-foundry-system/refs/heads/main/system.json",
+  "download": "https://github.com/NelaTrex/shinobi-no-sho-foundry-system/archive/refs/heads/main.zip",
   "grid": {
     "units": "m"
   },
