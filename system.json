@@ -14,7 +14,7 @@
   "readme": "README.md",
   "bugs": "https://github.com/NelaTrex/shinobi-no-sho-foundry-system/issues",
   "changelog": "CHANGELOG.md",
-  "version": "1.13.3",
+  "version": "1.14.0",
   "compatibility": {
     "minimum": "11",
     "verified": "12"
@@ -70,8 +70,8 @@
     }
   ],
   "socket": true,
-  "manifest": "https://raw.githubusercontent.com/NelaTrex/shinobi-no-sho-foundry-system/refs/heads/main/system.json",
-  "download": "https://github.com/NelaTrex/shinobi-no-sho-foundry-system/releases/download/v1.13.3/shinobinosho-v1.13.3.zip",
+  "manifest": "https://raw.githubusercontent.com/NelaTrex/shinobi-no-sho-foundry-system/main/system.json",
+  "download": "https://github.com/NelaTrex/shinobi-no-sho-foundry-system/releases/download/v1.14.0/shinobinosho-v1.14.0.zip",
   "grid": {
     "units": "m"
   },
